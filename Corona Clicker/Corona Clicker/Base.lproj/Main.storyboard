@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Bungee-Regular.otf">
+            <string>Bungee-Regular</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Corona_Clicker" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SARS-COV-2" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5gc-Lu-jkJ">
+                                <rect key="frame" x="73.5" y="140" width="267" height="43"/>
+                                <fontDescription key="fontDescription" name="Bungee-Regular" family="Bungee" pointSize="42"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="The plague of the XXI Century" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QVf-Mc-qMy">
+                                <rect key="frame" x="70" y="187" width="274" height="26"/>
+                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="20"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="corona.png" translatesAutoresizingMaskIntoConstraints="NO" id="PxA-a0-YqG">
+                                <rect key="frame" x="64" y="281" width="286" height="286"/>
+                                <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="PxA-a0-YqG" secondAttribute="height" multiplier="1:1" id="4tF-ip-Tvw"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tap to play" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Me5-Up-T7Y">
+                                <rect key="frame" x="150.5" y="591" width="113" height="17"/>
+                                <fontDescription key="fontDescription" name="Bungee-Regular" family="Bungee" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="5gc-Lu-jkJ" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="96" id="6eU-hO-rX2"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="PxA-a0-YqG" secondAttribute="trailing" constant="64" id="9It-Ge-KeD"/>
+                            <constraint firstItem="Me5-Up-T7Y" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Bm3-Uv-RaM"/>
+                            <constraint firstItem="QVf-Mc-qMy" firstAttribute="top" secondItem="5gc-Lu-jkJ" secondAttribute="bottom" constant="4" id="EDK-By-UZ8"/>
+                            <constraint firstItem="PxA-a0-YqG" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="-24" id="FsL-X6-fDb"/>
+                            <constraint firstItem="Me5-Up-T7Y" firstAttribute="top" secondItem="PxA-a0-YqG" secondAttribute="bottom" constant="24" id="JKJ-FF-Oek"/>
+                            <constraint firstItem="QVf-Mc-qMy" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Oq5-J5-GRo"/>
+                            <constraint firstItem="5gc-Lu-jkJ" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="VvF-PD-CBA"/>
+                            <constraint firstItem="PxA-a0-YqG" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="64" id="jV1-ty-Kqy"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="131.8840579710145" y="117.85714285714285"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="4P8-Tm-68u">
+            <objects>
+                <viewController id="bOb-9F-gVv" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="nF4-Zo-cRw">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="corona.png" translatesAutoresizingMaskIntoConstraints="NO" id="T6a-cl-xMD">
+                                <rect key="frame" x="64" y="281" width="286" height="286"/>
+                                <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="T6a-cl-xMD" secondAttribute="height" multiplier="1:1" id="x7a-Oh-MdU"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="567 DECEASED" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1mG-EK-cg1">
+                                <rect key="frame" x="69.5" y="140" width="275" height="36"/>
+                                <fontDescription key="fontDescription" name="Bungee-Regular" family="Bungee" pointSize="36"/>
+                                <color key="textColor" red="0.57321560380000003" green="0.01609252207" blue="0.094076193870000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="5.5 People per second" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2xY-uY-dYk">
+                                <rect key="frame" x="104" y="180" width="206" height="26"/>
+                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="20"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="CONTAIGOUSNESS" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QE0-6v-lrF">
+                                <rect key="frame" x="125" y="591" width="164" height="21"/>
+                                <fontDescription key="fontDescription" name="Futura-Bold" family="Futura" pointSize="16"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="x2" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wzT-vE-hQs">
+                                <rect key="frame" x="182" y="616" width="50" height="36"/>
+                                <fontDescription key="fontDescription" name="Bungee-Regular" family="Bungee" pointSize="36"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="QE0-6v-lrF" firstAttribute="top" secondItem="T6a-cl-xMD" secondAttribute="bottom" constant="24" id="453-vk-KW4"/>
+                            <constraint firstItem="T6a-cl-xMD" firstAttribute="centerY" secondItem="nF4-Zo-cRw" secondAttribute="centerY" constant="-24" id="45Z-eH-9nU"/>
+                            <constraint firstItem="QE0-6v-lrF" firstAttribute="centerX" secondItem="nF4-Zo-cRw" secondAttribute="centerX" id="76F-PA-HxZ"/>
+                            <constraint firstItem="2xY-uY-dYk" firstAttribute="top" secondItem="1mG-EK-cg1" secondAttribute="bottom" constant="4" id="7Tv-Og-5Ic"/>
+                            <constraint firstItem="2xY-uY-dYk" firstAttribute="centerX" secondItem="nF4-Zo-cRw" secondAttribute="centerX" id="AVc-PK-Ja8"/>
+                            <constraint firstItem="wzT-vE-hQs" firstAttribute="top" secondItem="QE0-6v-lrF" secondAttribute="bottom" constant="4" id="BHn-0d-KEC"/>
+                            <constraint firstItem="T6a-cl-xMD" firstAttribute="leading" secondItem="ULx-yj-rs9" secondAttribute="leading" constant="64" id="JqX-8Z-p2t"/>
+                            <constraint firstItem="ULx-yj-rs9" firstAttribute="trailing" secondItem="T6a-cl-xMD" secondAttribute="trailing" constant="64" id="PBg-a7-scP"/>
+                            <constraint firstItem="T6a-cl-xMD" firstAttribute="width" secondItem="T6a-cl-xMD" secondAttribute="height" multiplier="1:1" id="dUY-TA-ODt"/>
+                            <constraint firstItem="1mG-EK-cg1" firstAttribute="centerX" secondItem="nF4-Zo-cRw" secondAttribute="centerX" id="u9u-hm-j4p"/>
+                            <constraint firstItem="wzT-vE-hQs" firstAttribute="centerX" secondItem="nF4-Zo-cRw" secondAttribute="centerX" id="xBr-Y8-Ve1"/>
+                            <constraint firstItem="1mG-EK-cg1" firstAttribute="top" secondItem="ULx-yj-rs9" secondAttribute="top" constant="96" id="zZb-W6-kIQ"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="ULx-yj-rs9"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="z7C-hp-alh" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="913" y="118"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="corona.png" width="325" height="331"/>
+    </resources>
+</document>
