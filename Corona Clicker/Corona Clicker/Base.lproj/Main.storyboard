@@ -21,50 +21,50 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SARS-COV-2" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5gc-Lu-jkJ">
-                                <rect key="frame" x="74" y="140" width="266.5" height="42.5"/>
+                                <rect key="frame" x="74" y="80" width="266.5" height="42.5"/>
                                 <fontDescription key="fontDescription" name="Bungee-Regular" family="Bungee" pointSize="42"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="The plague of the XXI Century" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QVf-Mc-qMy">
-                                <rect key="frame" x="70" y="186.5" width="274" height="26"/>
+                                <rect key="frame" x="70" y="126.5" width="274" height="26"/>
                                 <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="20"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="corona.png" translatesAutoresizingMaskIntoConstraints="NO" id="PxA-a0-YqG">
-                                <rect key="frame" x="64" y="281" width="286" height="286"/>
+                                <rect key="frame" x="56" y="281" width="302" height="302"/>
                                 <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="PxA-a0-YqG" secondAttribute="height" multiplier="1:1" id="4tF-ip-Tvw"/>
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tap to play" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Me5-Up-T7Y">
-                                <rect key="frame" x="140.5" y="591" width="133" height="20"/>
+                                <rect key="frame" x="140.5" y="607" width="133" height="20"/>
                                 <fontDescription key="fontDescription" name="Bungee-Regular" family="Bungee" pointSize="20"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label hidden="YES" opaque="NO" userInteractionEnabled="NO" alpha="0.0" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="567 DECEASED" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Muy-r0-E4Q">
-                                <rect key="frame" x="69.5" y="140" width="275" height="36"/>
+                                <rect key="frame" x="69.5" y="80" width="275" height="36"/>
                                 <fontDescription key="fontDescription" name="Bungee-Regular" family="Bungee" pointSize="36"/>
                                 <color key="textColor" red="0.57321560380000003" green="0.01609252207" blue="0.094076193870000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label hidden="YES" opaque="NO" userInteractionEnabled="NO" alpha="0.0" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0.0 People per second" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2Ap-xh-APJ">
-                                <rect key="frame" x="104" y="180" width="206" height="26"/>
+                                <rect key="frame" x="104" y="120" width="206" height="26"/>
                                 <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="20"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label hidden="YES" opaque="NO" userInteractionEnabled="NO" alpha="0.0" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="CONTAIGOUSNESS" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Tk1-fa-x8h">
-                                <rect key="frame" x="125" y="591" width="164" height="21"/>
+                                <rect key="frame" x="125" y="607" width="164" height="21"/>
                                 <fontDescription key="fontDescription" name="Futura-Bold" family="Futura" pointSize="16"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label hidden="YES" opaque="NO" userInteractionEnabled="NO" alpha="0.0" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="x2" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="g3f-Ay-nJw">
-                                <rect key="frame" x="182" y="616" width="50" height="36"/>
+                                <rect key="frame" x="182" y="632" width="50" height="36"/>
                                 <fontDescription key="fontDescription" name="Bungee-Regular" family="Bungee" pointSize="36"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
@@ -73,12 +73,12 @@
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="2Ap-xh-APJ" firstAttribute="top" secondItem="Muy-r0-E4Q" secondAttribute="bottom" constant="4" id="42S-EY-EnN"/>
-                            <constraint firstItem="5gc-Lu-jkJ" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="96" id="6eU-hO-rX2"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="PxA-a0-YqG" secondAttribute="trailing" constant="64" id="9It-Ge-KeD"/>
+                            <constraint firstItem="5gc-Lu-jkJ" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="36" id="6eU-hO-rX2"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="PxA-a0-YqG" secondAttribute="trailing" constant="56" id="9It-Ge-KeD"/>
                             <constraint firstItem="Me5-Up-T7Y" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Bm3-Uv-RaM"/>
                             <constraint firstItem="QVf-Mc-qMy" firstAttribute="top" secondItem="5gc-Lu-jkJ" secondAttribute="bottom" constant="4" id="EDK-By-UZ8"/>
-                            <constraint firstItem="PxA-a0-YqG" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="-24" id="FsL-X6-fDb"/>
-                            <constraint firstItem="Muy-r0-E4Q" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="96" id="HE6-Ko-cqS"/>
+                            <constraint firstItem="PxA-a0-YqG" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="-16" id="FsL-X6-fDb"/>
+                            <constraint firstItem="Muy-r0-E4Q" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="36" id="HE6-Ko-cqS"/>
                             <constraint firstItem="Tk1-fa-x8h" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="IH5-Il-VQx"/>
                             <constraint firstItem="Me5-Up-T7Y" firstAttribute="top" secondItem="PxA-a0-YqG" secondAttribute="bottom" constant="24" id="JKJ-FF-Oek"/>
                             <constraint firstItem="g3f-Ay-nJw" firstAttribute="top" secondItem="Tk1-fa-x8h" secondAttribute="bottom" constant="4" id="LN6-8b-Ikt"/>
@@ -86,7 +86,7 @@
                             <constraint firstItem="Tk1-fa-x8h" firstAttribute="top" secondItem="PxA-a0-YqG" secondAttribute="bottom" constant="24" id="VdN-sO-sae"/>
                             <constraint firstItem="5gc-Lu-jkJ" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="VvF-PD-CBA"/>
                             <constraint firstItem="2Ap-xh-APJ" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="cNE-kX-Wyl"/>
-                            <constraint firstItem="PxA-a0-YqG" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="64" id="jV1-ty-Kqy"/>
+                            <constraint firstItem="PxA-a0-YqG" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="56" id="jV1-ty-Kqy"/>
                             <constraint firstItem="Muy-r0-E4Q" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="q6a-IV-Fwd"/>
                             <constraint firstItem="g3f-Ay-nJw" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="xXg-kT-AoQ"/>
                         </constraints>
