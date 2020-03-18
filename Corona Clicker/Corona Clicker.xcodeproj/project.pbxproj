@@ -7,26 +7,34 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5679DC0C24228D8A00965598 /* UIImageViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5679DC0B24228D8A00965598 /* UIImageViewExtension.swift */; };
+		569CE69D24229322002D54B3 /* Bungee-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 56CD257B242194C800D00880 /* Bungee-Regular.otf */; };
 		56CD25632421931800D00880 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56CD25622421931800D00880 /* AppDelegate.swift */; };
 		56CD25652421931800D00880 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56CD25642421931800D00880 /* SceneDelegate.swift */; };
-		56CD25672421931800D00880 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56CD25662421931800D00880 /* ViewController.swift */; };
 		56CD256A2421931800D00880 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 56CD25682421931800D00880 /* Main.storyboard */; };
 		56CD256C2421931B00D00880 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 56CD256B2421931B00D00880 /* Assets.xcassets */; };
 		56CD256F2421931B00D00880 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 56CD256D2421931B00D00880 /* LaunchScreen.storyboard */; };
 		56CD257D2421961500D00880 /* corona.png in Resources */ = {isa = PBXBuildFile; fileRef = 56CD257C2421961500D00880 /* corona.png */; };
+		56F018A32422273E00A816B0 /* GameVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56F018A22422273E00A816B0 /* GameVC.swift */; };
+		56F018A524222B2500A816B0 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56F018A424222B2500A816B0 /* Constants.swift */; };
+		56F018AC2422856E00A816B0 /* UILabelExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56F018AB2422856E00A816B0 /* UILabelExtension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		5679DC0B24228D8A00965598 /* UIImageViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageViewExtension.swift; sourceTree = "<group>"; };
+		569CE69E24229328002D54B3 /* corona.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = corona.png; sourceTree = "<group>"; };
 		56CD255F2421931800D00880 /* Corona Clicker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Corona Clicker.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		56CD25622421931800D00880 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		56CD25642421931800D00880 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		56CD25662421931800D00880 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		56CD25692421931800D00880 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		56CD256B2421931B00D00880 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		56CD256E2421931B00D00880 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		56CD25702421931B00D00880 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		56CD257B242194C800D00880 /* Bungee-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Bungee-Regular.otf"; path = "../../../../../Library/Fonts/Bungee-Regular.otf"; sourceTree = "<group>"; };
 		56CD257C2421961500D00880 /* corona.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = corona.png; path = ../../../../corona.png; sourceTree = "<group>"; };
+		56F018A22422273E00A816B0 /* GameVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameVC.swift; sourceTree = "<group>"; };
+		56F018A424222B2500A816B0 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		56F018AB2422856E00A816B0 /* UILabelExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UILabelExtension.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,12 +68,14 @@
 			isa = PBXGroup;
 			children = (
 				56CD257A242193D300D00880 /* Other */,
-				56CD2579242193C600D00880 /* Controller */,
-				56CD2578242193C100D00880 /* View */,
-				56CD2577242193BA00D00880 /* Model */,
+				56F018A82422823000A816B0 /* Extensions */,
 				56CD2576242193B100D00880 /* Resources */,
+				56CD2577242193BA00D00880 /* Model */,
+				56CD2578242193C100D00880 /* View */,
+				56CD2579242193C600D00880 /* Controller */,
 				56CD25682421931800D00880 /* Main.storyboard */,
 				56CD256B2421931B00D00880 /* Assets.xcassets */,
+				569CE69E24229328002D54B3 /* corona.png */,
 				56CD256D2421931B00D00880 /* LaunchScreen.storyboard */,
 				56CD25702421931B00D00880 /* Info.plist */,
 			);
@@ -98,7 +108,7 @@
 		56CD2579242193C600D00880 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				56CD25662421931800D00880 /* ViewController.swift */,
+				56F018A22422273E00A816B0 /* GameVC.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -106,10 +116,20 @@
 		56CD257A242193D300D00880 /* Other */ = {
 			isa = PBXGroup;
 			children = (
+				56F018A424222B2500A816B0 /* Constants.swift */,
 				56CD25622421931800D00880 /* AppDelegate.swift */,
 				56CD25642421931800D00880 /* SceneDelegate.swift */,
 			);
 			path = Other;
+			sourceTree = "<group>";
+		};
+		56F018A82422823000A816B0 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				56F018AB2422856E00A816B0 /* UILabelExtension.swift */,
+				5679DC0B24228D8A00965598 /* UIImageViewExtension.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -173,6 +193,7 @@
 				56CD256F2421931B00D00880 /* LaunchScreen.storyboard in Resources */,
 				56CD256C2421931B00D00880 /* Assets.xcassets in Resources */,
 				56CD256A2421931800D00880 /* Main.storyboard in Resources */,
+				569CE69D24229322002D54B3 /* Bungee-Regular.otf in Resources */,
 				56CD257D2421961500D00880 /* corona.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -184,9 +205,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				56CD25672421931800D00880 /* ViewController.swift in Sources */,
 				56CD25632421931800D00880 /* AppDelegate.swift in Sources */,
 				56CD25652421931800D00880 /* SceneDelegate.swift in Sources */,
+				56F018AC2422856E00A816B0 /* UILabelExtension.swift in Sources */,
+				56F018A32422273E00A816B0 /* GameVC.swift in Sources */,
+				5679DC0C24228D8A00965598 /* UIImageViewExtension.swift in Sources */,
+				56F018A524222B2500A816B0 /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
