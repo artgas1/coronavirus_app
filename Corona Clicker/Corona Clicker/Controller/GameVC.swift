@@ -35,8 +35,8 @@ class GameVC: UIViewController {
     // MARK: - Text Animation Settings
     let textDuration: CGFloat = 0.6
     let textDelay: CGFloat = 0.0
-    let textOffsetX: Int = -36
-    let textOffsetY: Int = 64
+    let textOffsetX: Int = 0
+    let textOffsetY: Int = 128
     
     override func viewDidLoad() {
         multiplyer.text = "X1"
@@ -82,11 +82,11 @@ class GameVC: UIViewController {
     }
     
     var labelX: Int {
-        return Int(virus.frame.origin.x) + textOffsetY + Int(arc4random()) % (Int(virus.frame.height) - textOffsetY)
+        return Int(virus.frame.origin.x) + 36 + Int(arc4random()) % (Int(virus.frame.height) - 64)
     }
     
     var labelY: Int {
-        return Int(virus.frame.origin.y) + textOffsetY + Int(arc4random()) % (Int(virus.frame.width) - textOffsetY)
+        return Int(virus.frame.origin.y) + 36 + Int(arc4random()) % (Int(virus.frame.width) - 64)
     }
     
     // MARK: - On First Tap
