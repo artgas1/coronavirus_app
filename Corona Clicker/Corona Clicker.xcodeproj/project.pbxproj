@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0322032624242C3D0080145E /* UIProgressViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0322032524242C3D0080145E /* UIProgressViewExtension.swift */; };
 		5679DC0C24228D8A00965598 /* UIImageViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5679DC0B24228D8A00965598 /* UIImageViewExtension.swift */; };
 		56CD25632421931800D00880 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56CD25622421931800D00880 /* AppDelegate.swift */; };
 		56CD25652421931800D00880 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56CD25642421931800D00880 /* SceneDelegate.swift */; };
@@ -20,6 +21,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0322032524242C3D0080145E /* UIProgressViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIProgressViewExtension.swift; sourceTree = "<group>"; };
 		5679DC0B24228D8A00965598 /* UIImageViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageViewExtension.swift; sourceTree = "<group>"; };
 		569CE69E24229328002D54B3 /* corona.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = corona.png; sourceTree = "<group>"; };
 		56CD255F2421931800D00880 /* Corona Clicker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Corona Clicker.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -125,6 +127,7 @@
 			children = (
 				56F018AB2422856E00A816B0 /* UILabelExtension.swift */,
 				5679DC0B24228D8A00965598 /* UIImageViewExtension.swift */,
+				0322032524242C3D0080145E /* UIProgressViewExtension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -204,6 +207,7 @@
 				56CD25632421931800D00880 /* AppDelegate.swift in Sources */,
 				56CD25652421931800D00880 /* SceneDelegate.swift in Sources */,
 				56F018AC2422856E00A816B0 /* UILabelExtension.swift in Sources */,
+				0322032624242C3D0080145E /* UIProgressViewExtension.swift in Sources */,
 				56F018A32422273E00A816B0 /* GameVC.swift in Sources */,
 				5679DC0C24228D8A00965598 /* UIImageViewExtension.swift in Sources */,
 				56F018A524222B2500A816B0 /* Constants.swift in Sources */,
