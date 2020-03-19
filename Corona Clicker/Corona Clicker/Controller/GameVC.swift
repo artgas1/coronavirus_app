@@ -32,6 +32,12 @@ class GameVC: UIViewController {
     let scaleX: CGFloat = 1.08
     let scaleY: CGFloat = 1.08
     
+    // MARK: - Text Animation Settings
+    let textDuration: CGFloat = 0.6
+    let textDelay: CGFloat = 0.0
+    let textOffsetX: Int = -36
+    let textOffsetY: Int = 64
+    
     override func viewDidLoad() {
         multiplyer.text = "X1"
         tapCounter.text = "0 INFECTED"
@@ -57,26 +63,30 @@ class GameVC: UIViewController {
         tapCounter.text = "\(counter) INFECTED"
         
         // MARK: - TODO: Complete Text Outputs w/ animation. Uncomment to test.
-        // counterTextOutputs(counter: 1*coeffitient)
+        counterTextOutputs(counter: 1*coeffitient)
         
         virus.scaleOutIn(duration: duration, delay: delay, scaleX: scaleX, scaleY: scaleY)
     }
     
     func counterTextOutputs(counter: Int) {
-        let label = UILabel(frame: CGRect(x: 0, y: 0, width: 16, height: 24))
+        let label = UILabel(frame: CGRect(x: 0, y: 0, width: 64, height: 32))
         label.center = CGPoint(x: labelX, y: labelY)
-        label.font = UIFont(name: "Bungee-Regular", size: 12)
+        label.font = UIFont(name: "Bungee-Regular", size: 30)
         label.textAlignment = .center
         label.textColor = .white
+        label.text = "+\(counter)"
         self.view.addSubview(label)
+        label.floatAway(offsetX: textOffsetX, offsetY: textOffsetY, duration: textDuration, delay: textDelay) {
+            label.removeFromSuperview()
+        }
     }
     
     var labelX: Int {
-        return Int(arc4random()) % Int(virus.frame.height)
+        return Int(virus.frame.origin.x) + textOffsetY + Int(arc4random()) % (Int(virus.frame.height) - textOffsetY)
     }
     
     var labelY: Int {
-        return Int(arc4random()) % Int(virus.frame.height)
+        return Int(virus.frame.origin.y) + textOffsetY + Int(arc4random()) % (Int(virus.frame.width) - textOffsetY)
     }
     
     // MARK: - On First Tap
@@ -113,13 +123,8 @@ class GameVC: UIViewController {
         tapSpeed.text = String(format: "%.2f people per second", tapsPerSec)
         
         if runCounter > 5.0 && tapsPerSec > 5.0 { coeffitient = 2 }
-        else if runCounter == 2 { coeffitient = 1 }
-        
         if runCounter > 10.0 && tapsPerSec > 10.0 { coeffitient = 3 }
-        else if runCounter == 3 { coeffitient = 2 }
-        
-        if runCounter > 30.0 && tapsPerSec > 20.0 { coeffitient = 3 }
-        else if runCounter == 3 { coeffitient = 2 }
+        if runCounter > 30.0 && tapsPerSec > 20.0 { coeffitient = 5 }
         
         multiplyer.text = "X\(coeffitient)"
     }

@@ -23,4 +23,14 @@ extension UILabel {
             completed()
         }
     }
+    
+    func floatAway(offsetX: Int, offsetY: Int, duration: CGFloat, delay: CGFloat, completed: @escaping () -> Void) {
+        UIView.animate(withDuration: TimeInterval(duration), delay: TimeInterval(delay), options: UIView.AnimationOptions.curveEaseIn, animations: {
+            self.center = CGPoint(x: Int(self.center.x) - offsetX, y: Int(self.center.y) - offsetY)
+            self.font = UIFont(name: "Bungee-Regular", size: 24)
+            self.alpha = 0.0
+        }) { (_) in
+            completed()
+        }
+    }
 }
