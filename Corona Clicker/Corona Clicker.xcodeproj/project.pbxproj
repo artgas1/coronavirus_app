@@ -8,12 +8,12 @@
 
 /* Begin PBXBuildFile section */
 		5679DC0C24228D8A00965598 /* UIImageViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5679DC0B24228D8A00965598 /* UIImageViewExtension.swift */; };
-		569CE69D24229322002D54B3 /* Bungee-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 56CD257B242194C800D00880 /* Bungee-Regular.otf */; };
 		56CD25632421931800D00880 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56CD25622421931800D00880 /* AppDelegate.swift */; };
 		56CD25652421931800D00880 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56CD25642421931800D00880 /* SceneDelegate.swift */; };
 		56CD256A2421931800D00880 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 56CD25682421931800D00880 /* Main.storyboard */; };
 		56CD256C2421931B00D00880 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 56CD256B2421931B00D00880 /* Assets.xcassets */; };
 		56CD256F2421931B00D00880 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 56CD256D2421931B00D00880 /* LaunchScreen.storyboard */; };
+		56DC560724242332003D411A /* Bungee-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 56DC560624242332003D411A /* Bungee-Regular.otf */; };
 		56F018A32422273E00A816B0 /* GameVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56F018A22422273E00A816B0 /* GameVC.swift */; };
 		56F018A524222B2500A816B0 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56F018A424222B2500A816B0 /* Constants.swift */; };
 		56F018AC2422856E00A816B0 /* UILabelExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56F018AB2422856E00A816B0 /* UILabelExtension.swift */; };
@@ -29,7 +29,7 @@
 		56CD256B2421931B00D00880 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		56CD256E2421931B00D00880 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		56CD25702421931B00D00880 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		56CD257B242194C800D00880 /* Bungee-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Bungee-Regular.otf"; path = "../../../../../Library/Fonts/Bungee-Regular.otf"; sourceTree = "<group>"; };
+		56DC560624242332003D411A /* Bungee-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Bungee-Regular.otf"; sourceTree = "<group>"; };
 		56F018A22422273E00A816B0 /* GameVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameVC.swift; sourceTree = "<group>"; };
 		56F018A424222B2500A816B0 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		56F018AB2422856E00A816B0 /* UILabelExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UILabelExtension.swift; sourceTree = "<group>"; };
@@ -83,7 +83,7 @@
 		56CD2576242193B100D00880 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				56CD257B242194C800D00880 /* Bungee-Regular.otf */,
+				56DC560624242332003D411A /* Bungee-Regular.otf */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -190,7 +190,7 @@
 				56CD256F2421931B00D00880 /* LaunchScreen.storyboard in Resources */,
 				56CD256C2421931B00D00880 /* Assets.xcassets in Resources */,
 				56CD256A2421931800D00880 /* Main.storyboard in Resources */,
-				569CE69D24229322002D54B3 /* Bungee-Regular.otf in Resources */,
+				56DC560724242332003D411A /* Bungee-Regular.otf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
