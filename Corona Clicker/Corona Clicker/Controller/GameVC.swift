@@ -25,6 +25,7 @@ class GameVC: UIViewController {
     var runCounter: CGFloat = 0.0
     var tapsPerSec: CGFloat = 0.0
     var coeffitient = 1
+    var nullCounter = 0
     
     // MARK: - Virus Animation Settings
     let duration: CGFloat = 0.5
@@ -60,6 +61,7 @@ class GameVC: UIViewController {
             changeAppearence()
         }
         counter += 1 * coeffitient
+        nullCounter += 1 * coeffitient
         tapCounter.text = "\(counter) INFECTED"
         
         // MARK: - TODO: Complete Text Outputs w/ animation. Uncomment to test.
@@ -113,12 +115,13 @@ class GameVC: UIViewController {
     // MARK: - Speed Timer
     func startTimer() {
         let timer = Timer(timeInterval: 0.2, target: self, selector: #selector(self.fireTimer), userInfo: nil, repeats: true)
+        let perSecTimer = Timer(timeInterval: 1, target: self, selector: #selector(self.peopleCounter), userInfo: nil, repeats: true)
         RunLoop.current.add(timer, forMode: RunLoop.Mode.common)
+        RunLoop.current.add(perSecTimer, forMode: RunLoop.Mode.common)
     }
     
     @objc func fireTimer() {
         runCounter += 0.2
-        tapsPerSec = CGFloat(counter) / CGFloat(runCounter)
         tapSpeed.text = "\(tapsPerSec) people per second"
         tapSpeed.text = String(format: "%.2f people per second", tapsPerSec)
         
@@ -127,5 +130,10 @@ class GameVC: UIViewController {
         if runCounter > 30.0 && tapsPerSec > 20.0 { coeffitient = 5 }
         
         multiplyer.text = "X\(coeffitient)"
+    }
+    
+    @objc func peopleCounter() {
+        tapsPerSec = CGFloat(nullCounter)
+        nullCounter = 0
     }
 }
