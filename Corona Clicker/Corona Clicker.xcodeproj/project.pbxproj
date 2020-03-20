@@ -33,7 +33,7 @@
 		56CD256B2421931B00D00880 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		56CD256E2421931B00D00880 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		56CD25702421931B00D00880 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		56DC560624242332003D411A /* Bungee-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Bungee-Regular.otf"; path = "/Users/georg/Desktop/coronavirus_app/Corona Clicker/Corona Clicker/Resources/Bungee-Regular.otf"; sourceTree = "<absolute>"; };
+		56DC560624242332003D411A /* Bungee-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Bungee-Regular.otf"; path = "/Users/andrejhromov/programms/IOS/Apps/CoronaApp/coronavirus_app/Corona Clicker/Corona Clicker/Resources/Bungee-Regular.otf"; sourceTree = "<absolute>"; };
 		56DC560824242C20003D411A /* UIButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIButton.swift; sourceTree = "<group>"; };
 		56DC560A24243A9D003D411A /* UIViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewExtension.swift; sourceTree = "<group>"; };
 		56DC560C24243BE3003D411A /* MenuVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuVC.swift; sourceTree = "<group>"; };
@@ -135,7 +135,6 @@
 				56DC560824242C20003D411A /* UIButton.swift */,
 				56DC560A24243A9D003D411A /* UIViewExtension.swift */,
 				0322032524242C3D0080145E /* UIProgressViewExtension.swift */,
-589338faaade311fe3a1ce9943d792c50820eb00
 			);
 			path = Extensions;
 			sourceTree = "<group>";

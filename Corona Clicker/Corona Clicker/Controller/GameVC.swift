@@ -28,8 +28,10 @@ class GameVC: UIViewController {
     var tapsPerSec: CGFloat = 0.0
     var coeffitient = 1
     var nullCounter = 0
+    var goal = 1000
+    var purshasedCoeffitient = 1
     
-    let goal = 1000
+    let worldPopulation = 7783970600
     
     // MARK: - Virus Animation Settings
     let duration: CGFloat = 0.5
@@ -136,10 +138,13 @@ class GameVC: UIViewController {
         tapSpeed.text = "\(tapsPerSec) people per second"
         tapSpeed.text = String(format: "%.2f people per second", tapsPerSec)
         
-        if runCounter > 15.0 && tapsPerSec > 15.0 { coeffitient = 5 }
-        else if runCounter > 10.0 && tapsPerSec > 10.0 { coeffitient = 3 }
-        else if runCounter > 5.0 && tapsPerSec > 5.0 { coeffitient = 2 }
-        else { coeffitient = 1 }
+        if runCounter > 15.0 && tapsPerSec > 15.0 { coeffitient = 5 * purshasedCoeffitient}
+        else if runCounter > 10.0 && tapsPerSec > 10.0 { coeffitient = 3 * purshasedCoeffitient}
+        else if runCounter > 5.0 && tapsPerSec > 5.0 { coeffitient = 2 * purshasedCoeffitient}
+        else { coeffitient = 1 * purshasedCoeffitient}
+        
+        if counter >= goal {goal *= 10}
+        if goal >= worldPopulation {goal = worldPopulation}
         
         multiplyer.text = "X\(coeffitient)"
     }
