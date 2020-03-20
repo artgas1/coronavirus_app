@@ -32,7 +32,7 @@
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="corona.png" translatesAutoresizingMaskIntoConstraints="NO" id="PxA-a0-YqG">
+                            <imageView clipsSubviews="YES" multipleTouchEnabled="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="corona" translatesAutoresizingMaskIntoConstraints="NO" id="PxA-a0-YqG">
                                 <rect key="frame" x="56" y="281" width="302" height="302"/>
                                 <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
@@ -69,12 +69,15 @@
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Umh-5B-HM4">
+                            <button hidden="YES" opaque="NO" alpha="0.0" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Umh-5B-HM4">
                                 <rect key="frame" x="329" y="36" width="61" height="32"/>
                                 <fontDescription key="fontDescription" name="Bungee-Regular" family="Bungee" pointSize="20"/>
                                 <state key="normal" title="MENU">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <action selector="menuPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="fsm-l9-Wyl"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -105,19 +108,126 @@
                         <outlet property="callToAction" destination="Me5-Up-T7Y" id="Pqz-xr-zfo"/>
                         <outlet property="gameSubtitle" destination="QVf-Mc-qMy" id="bFG-VP-uoS"/>
                         <outlet property="gameTitle" destination="5gc-Lu-jkJ" id="1QU-Ed-TiS"/>
+                        <outlet property="menuBtn" destination="Umh-5B-HM4" id="4gC-gu-aGh"/>
                         <outlet property="multiplyer" destination="g3f-Ay-nJw" id="XBo-Rf-8KL"/>
                         <outlet property="multiplyerTitle" destination="Tk1-fa-x8h" id="Uh2-NI-WQx"/>
                         <outlet property="tapCounter" destination="Muy-r0-E4Q" id="caD-pF-TxJ"/>
                         <outlet property="tapSpeed" destination="2Ap-xh-APJ" id="XcZ-9X-ZR0"/>
                         <outlet property="virus" destination="PxA-a0-YqG" id="f13-kD-3TC"/>
+                        <segue destination="Ira-pR-dOD" kind="presentation" identifier="GameToMenu" modalPresentationStyle="overCurrentContext" id="Y9T-R8-OMU"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="131.8840579710145" y="117.85714285714285"/>
         </scene>
+        <!--MenuVC-->
+        <scene sceneID="l0e-sS-vvn">
+            <objects>
+                <viewController id="Ira-pR-dOD" customClass="MenuVC" customModule="Corona_Clicker" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="1cx-i5-ac9">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dgQ-zK-9fj">
+                                <rect key="frame" x="16" y="198" width="382" height="428"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="nFw-jr-Scg">
+                                        <rect key="frame" x="56" y="102" width="270" height="224"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qrl-WB-kRU">
+                                                <rect key="frame" x="0.0" y="0.0" width="270" height="64"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="64" id="dYn-aX-yRQ"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
+                                                <state key="normal" title="Continue">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                        <real key="value" value="5"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="ContinueBtn:" destination="Ojf-yd-Rao" eventType="touchUpInside" id="RfX-rc-1dV"/>
+                                                    <action selector="continuePressed:" destination="Ira-pR-dOD" eventType="touchUpInside" id="Jqp-cV-mTl"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="21T-HK-dGE">
+                                                <rect key="frame" x="0.0" y="80" width="270" height="64"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="64" id="bHi-tK-anZ"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
+                                                <state key="normal" title="Customize">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                        <real key="value" value="5"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="customizePressed:" destination="Ira-pR-dOD" eventType="touchUpInside" id="I0W-ke-CFS"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4Gu-y8-eQC">
+                                                <rect key="frame" x="0.0" y="160" width="270" height="64"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="64" id="bHK-Pq-TLj"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
+                                                <state key="normal" title="About">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                        <real key="value" value="5"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="aboutPressed:" destination="Ira-pR-dOD" eventType="touchUpInside" id="W1i-PN-nSP"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <color key="backgroundColor" red="0.047058823529411764" green="0.062745098039215685" blue="0.090196078431372548" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstItem="nFw-jr-Scg" firstAttribute="centerY" secondItem="dgQ-zK-9fj" secondAttribute="centerY" id="IO2-UC-wBB"/>
+                                    <constraint firstAttribute="trailing" secondItem="nFw-jr-Scg" secondAttribute="trailing" constant="56" id="NDS-if-uCc"/>
+                                    <constraint firstAttribute="height" constant="428" id="UK1-fi-xtL"/>
+                                    <constraint firstItem="nFw-jr-Scg" firstAttribute="leading" secondItem="dgQ-zK-9fj" secondAttribute="leading" constant="56" id="fAe-TH-mDf"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="0.59613449003067487" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="dgQ-zK-9fj" firstAttribute="centerY" secondItem="1cx-i5-ac9" secondAttribute="centerY" constant="-36" id="8WT-pz-pnA"/>
+                            <constraint firstItem="dgQ-zK-9fj" firstAttribute="leading" secondItem="PsE-z9-6rJ" secondAttribute="leading" constant="16" id="9mN-5j-c9d"/>
+                            <constraint firstItem="PsE-z9-6rJ" firstAttribute="trailing" secondItem="dgQ-zK-9fj" secondAttribute="trailing" constant="16" id="ha0-WT-rEx"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="PsE-z9-6rJ"/>
+                    </view>
+                    <connections>
+                        <outlet property="aboutBtn" destination="4Gu-y8-eQC" id="iFG-JH-0nS"/>
+                        <outlet property="continueBtn" destination="Qrl-WB-kRU" id="Pz2-o7-iO1"/>
+                        <outlet property="customizeBtn" destination="21T-HK-dGE" id="Bmy-0V-Qs8"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="BpS-6c-Kvl" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="Ojf-yd-Rao" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="959" y="118"/>
+        </scene>
     </scenes>
     <resources>
-        <image name="corona.png" width="325" height="331"/>
+        <image name="corona" width="325" height="331"/>
     </resources>
 </document>

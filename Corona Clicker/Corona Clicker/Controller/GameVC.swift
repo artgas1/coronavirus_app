@@ -38,10 +38,13 @@ class GameVC: UIViewController {
     let textOffsetX: Int = 0
     let textOffsetY: Int = 128
     
+    @IBOutlet weak var menuBtn: UIButton!
+    
     override func viewDidLoad() {
         multiplyer.text = "X1"
         tapCounter.text = "0 INFECTED"
         tapSpeed.text = "0.0 people per second"
+        menuBtn.titleLabel?.font = UIFont(name: "Bungee-Regular", size: 24)
         observeTaps()
         super.viewDidLoad()
     }
@@ -108,6 +111,7 @@ class GameVC: UIViewController {
         tapSpeed.fadeIn(duration: duration, delay: delay)
         multiplyerTitle.fadeIn(duration: duration, delay: delay)
         multiplyer.fadeIn(duration: duration, delay: delay)
+        menuBtn.fadeIn(duration: duration, delay: delay)
     }
     
     // MARK: - Speed Timer
@@ -128,4 +132,9 @@ class GameVC: UIViewController {
         
         multiplyer.text = "X\(coeffitient)"
     }
+    
+    @IBAction func menuPressed(_ sender: Any) {
+        self.performSegue(withIdentifier: "GameToMenu", sender: nil)
+    }
+    
 }

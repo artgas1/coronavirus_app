@@ -14,6 +14,9 @@
 		56CD256C2421931B00D00880 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 56CD256B2421931B00D00880 /* Assets.xcassets */; };
 		56CD256F2421931B00D00880 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 56CD256D2421931B00D00880 /* LaunchScreen.storyboard */; };
 		56DC560724242332003D411A /* Bungee-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 56DC560624242332003D411A /* Bungee-Regular.otf */; };
+		56DC560924242C20003D411A /* UIButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56DC560824242C20003D411A /* UIButton.swift */; };
+		56DC560B24243A9D003D411A /* UIViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56DC560A24243A9D003D411A /* UIViewExtension.swift */; };
+		56DC560D24243BE3003D411A /* MenuVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56DC560C24243BE3003D411A /* MenuVC.swift */; };
 		56F018A32422273E00A816B0 /* GameVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56F018A22422273E00A816B0 /* GameVC.swift */; };
 		56F018A524222B2500A816B0 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56F018A424222B2500A816B0 /* Constants.swift */; };
 		56F018AC2422856E00A816B0 /* UILabelExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56F018AB2422856E00A816B0 /* UILabelExtension.swift */; };
@@ -21,7 +24,6 @@
 
 /* Begin PBXFileReference section */
 		5679DC0B24228D8A00965598 /* UIImageViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageViewExtension.swift; sourceTree = "<group>"; };
-		569CE69E24229328002D54B3 /* corona.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = corona.png; sourceTree = "<group>"; };
 		56CD255F2421931800D00880 /* Corona Clicker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Corona Clicker.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		56CD25622421931800D00880 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		56CD25642421931800D00880 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -29,7 +31,10 @@
 		56CD256B2421931B00D00880 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		56CD256E2421931B00D00880 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		56CD25702421931B00D00880 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		56DC560624242332003D411A /* Bungee-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Bungee-Regular.otf"; sourceTree = "<group>"; };
+		56DC560624242332003D411A /* Bungee-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Bungee-Regular.otf"; path = "/Users/georg/Desktop/coronavirus_app/Corona Clicker/Corona Clicker/Resources/Bungee-Regular.otf"; sourceTree = "<absolute>"; };
+		56DC560824242C20003D411A /* UIButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIButton.swift; sourceTree = "<group>"; };
+		56DC560A24243A9D003D411A /* UIViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewExtension.swift; sourceTree = "<group>"; };
+		56DC560C24243BE3003D411A /* MenuVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuVC.swift; sourceTree = "<group>"; };
 		56F018A22422273E00A816B0 /* GameVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameVC.swift; sourceTree = "<group>"; };
 		56F018A424222B2500A816B0 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		56F018AB2422856E00A816B0 /* UILabelExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UILabelExtension.swift; sourceTree = "<group>"; };
@@ -73,7 +78,6 @@
 				56CD2579242193C600D00880 /* Controller */,
 				56CD25682421931800D00880 /* Main.storyboard */,
 				56CD256B2421931B00D00880 /* Assets.xcassets */,
-				569CE69E24229328002D54B3 /* corona.png */,
 				56CD256D2421931B00D00880 /* LaunchScreen.storyboard */,
 				56CD25702421931B00D00880 /* Info.plist */,
 			);
@@ -106,6 +110,7 @@
 			isa = PBXGroup;
 			children = (
 				56F018A22422273E00A816B0 /* GameVC.swift */,
+				56DC560C24243BE3003D411A /* MenuVC.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -125,6 +130,8 @@
 			children = (
 				56F018AB2422856E00A816B0 /* UILabelExtension.swift */,
 				5679DC0B24228D8A00965598 /* UIImageViewExtension.swift */,
+				56DC560824242C20003D411A /* UIButton.swift */,
+				56DC560A24243A9D003D411A /* UIViewExtension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -205,7 +212,10 @@
 				56CD25652421931800D00880 /* SceneDelegate.swift in Sources */,
 				56F018AC2422856E00A816B0 /* UILabelExtension.swift in Sources */,
 				56F018A32422273E00A816B0 /* GameVC.swift in Sources */,
+				56DC560924242C20003D411A /* UIButton.swift in Sources */,
+				56DC560D24243BE3003D411A /* MenuVC.swift in Sources */,
 				5679DC0C24228D8A00965598 /* UIImageViewExtension.swift in Sources */,
+				56DC560B24243A9D003D411A /* UIViewExtension.swift in Sources */,
 				56F018A524222B2500A816B0 /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
