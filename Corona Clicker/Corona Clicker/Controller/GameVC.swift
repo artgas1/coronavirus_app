@@ -18,6 +18,8 @@ class GameVC: UIViewController {
     @IBOutlet weak var tapSpeed: UILabel!
     @IBOutlet weak var multiplyerTitle: UILabel!
     @IBOutlet weak var multiplyer: UILabel!
+    @IBOutlet weak var progressBar: UIProgressView!
+    @IBOutlet weak var progressLabel: UILabel!
     
     // MARK: - Stats
     var gameStarted = false
@@ -26,6 +28,8 @@ class GameVC: UIViewController {
     var tapsPerSec: CGFloat = 0.0
     var coeffitient = 1
     var nullCounter = 0
+    
+    let goal = 1000
     
     // MARK: - Virus Animation Settings
     let duration: CGFloat = 0.5
@@ -46,6 +50,7 @@ class GameVC: UIViewController {
         tapCounter.text = "0 INFECTED"
         tapSpeed.text = "0.0 people per second"
         menuBtn.titleLabel?.font = UIFont(name: "Bungee-Regular", size: 24)
+        progressLabel.text = "0/\(goal)"
         observeTaps()
         super.viewDidLoad()
     }
@@ -66,8 +71,8 @@ class GameVC: UIViewController {
         counter += 1 * coeffitient
         nullCounter += 1 * coeffitient
         tapCounter.text = "\(counter) INFECTED"
-        
-        // MARK: - TODO: Complete Text Outputs w/ animation. Uncomment to test.
+        progressLabel.text = "\(counter)/\(goal)"
+        progressBar.progress = Float(counter) / Float(goal)
         counterTextOutputs(counter: 1*coeffitient)
         
         virus.scaleOutIn(duration: duration, delay: delay, scaleX: scaleX, scaleY: scaleY)
@@ -114,6 +119,8 @@ class GameVC: UIViewController {
         multiplyerTitle.fadeIn(duration: duration, delay: delay)
         multiplyer.fadeIn(duration: duration, delay: delay)
         menuBtn.fadeIn(duration: duration, delay: delay)
+        progressBar.fadeIn(duration: duration, delay: delay)
+        progressLabel.fadeIn(duration: duration, delay: delay)
     }
     
     // MARK: - Speed Timer
@@ -129,9 +136,10 @@ class GameVC: UIViewController {
         tapSpeed.text = "\(tapsPerSec) people per second"
         tapSpeed.text = String(format: "%.2f people per second", tapsPerSec)
         
-        if runCounter > 5.0 && tapsPerSec > 5.0 { coeffitient = 2 }
-        if runCounter > 10.0 && tapsPerSec > 10.0 { coeffitient = 3 }
-        if runCounter > 30.0 && tapsPerSec > 20.0 { coeffitient = 5 }
+        if runCounter > 15.0 && tapsPerSec > 15.0 { coeffitient = 5 }
+        else if runCounter > 10.0 && tapsPerSec > 10.0 { coeffitient = 3 }
+        else if runCounter > 5.0 && tapsPerSec > 5.0 { coeffitient = 2 }
+        else { coeffitient = 1 }
         
         multiplyer.text = "X\(coeffitient)"
     }

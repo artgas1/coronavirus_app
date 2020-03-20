@@ -9,10 +9,5 @@
 import UIKit
 
 extension UIProgressView {
-    func fadeIn(duration: CGFloat, delay: CGFloat) {
-        self.isHidden = false
-        UIView.animate(withDuration: TimeInterval(duration), delay: TimeInterval(delay), options: UIView.AnimationOptions.curveEaseIn, animations: {
-            self.alpha = 1.0
-        })
-    }
+    
 }

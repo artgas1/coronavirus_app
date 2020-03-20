@@ -132,12 +132,10 @@
 			children = (
 				56F018AB2422856E00A816B0 /* UILabelExtension.swift */,
 				5679DC0B24228D8A00965598 /* UIImageViewExtension.swift */,
-<<<<<<< HEAD
 				56DC560824242C20003D411A /* UIButton.swift */,
 				56DC560A24243A9D003D411A /* UIViewExtension.swift */,
-=======
 				0322032524242C3D0080145E /* UIProgressViewExtension.swift */,
->>>>>>> 589338faaade311fe3a1ce9943d792c50820eb00
+589338faaade311fe3a1ce9943d792c50820eb00
 			);
 			path = Extensions;
 			sourceTree = "<group>";
