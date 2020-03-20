@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15510"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -79,6 +79,16 @@
                                     <action selector="menuPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="fsm-l9-Wyl"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Сгорело 5 жидов из 100" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uaG-M6-p76">
+                                <rect key="frame" x="24" y="36" width="141" height="16"/>
+                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="12"/>
+                                <color key="textColor" red="0.98721589087329731" green="0.969325814021607" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" ambiguous="YES" misplaced="YES" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="4Gj-pq-pOm">
+                                <rect key="frame" x="20" y="60" width="265" height="2"/>
+                                <color key="tintColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </progressView>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
@@ -93,12 +103,16 @@
                             <constraint firstItem="Muy-r0-E4Q" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="64" id="HE6-Ko-cqS"/>
                             <constraint firstItem="Tk1-fa-x8h" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="IH5-Il-VQx"/>
                             <constraint firstItem="Me5-Up-T7Y" firstAttribute="top" secondItem="PxA-a0-YqG" secondAttribute="bottom" constant="24" id="JKJ-FF-Oek"/>
+                            <constraint firstItem="uaG-M6-p76" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="24" id="KY0-T1-VAx"/>
                             <constraint firstItem="g3f-Ay-nJw" firstAttribute="top" secondItem="Tk1-fa-x8h" secondAttribute="bottom" constant="4" id="LN6-8b-Ikt"/>
+                            <constraint firstItem="uaG-M6-p76" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="36" id="N0E-kR-kdN"/>
                             <constraint firstItem="QVf-Mc-qMy" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Oq5-J5-GRo"/>
                             <constraint firstItem="Tk1-fa-x8h" firstAttribute="top" secondItem="PxA-a0-YqG" secondAttribute="bottom" constant="24" id="VdN-sO-sae"/>
                             <constraint firstItem="5gc-Lu-jkJ" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="VvF-PD-CBA"/>
                             <constraint firstItem="2Ap-xh-APJ" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="cNE-kX-Wyl"/>
+                            <constraint firstItem="4Gj-pq-pOm" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="24" id="gAc-mZ-zFm"/>
                             <constraint firstItem="PxA-a0-YqG" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="56" id="jV1-ty-Kqy"/>
+                            <constraint firstItem="4Gj-pq-pOm" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="7" id="ppw-Mx-eLU"/>
                             <constraint firstItem="Muy-r0-E4Q" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="q6a-IV-Fwd"/>
                             <constraint firstItem="g3f-Ay-nJw" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="xXg-kT-AoQ"/>
                         </constraints>

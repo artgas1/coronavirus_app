@@ -136,14 +136,15 @@ class GameVC: UIViewController {
         multiplyer.text = "X\(coeffitient)"
     }
     
-
+<<<<<<< HEAD
     @IBAction func menuPressed(_ sender: Any) {
         self.performSegue(withIdentifier: "GameToMenu", sender: nil)
     }
     
-
+=======
     @objc func peopleCounter() {
         tapsPerSec = CGFloat(nullCounter)
         nullCounter = 0
     }
+>>>>>>> 589338faaade311fe3a1ce9943d792c50820eb00
 }
