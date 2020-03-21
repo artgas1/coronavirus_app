@@ -50,7 +50,12 @@ class GameVC: UIViewController {
         }
         get{
             if let goalData = UserDefaults.standard.integer(forKey: "goalDataKey") as? Int{
-                return goalData
+                if goalData > 10{
+                    return goalData
+                }
+                else {
+                    return 10
+                }
             }
             else {
                 return 10
@@ -186,7 +191,7 @@ class GameVC: UIViewController {
     
 
     @objc func peopleCounter() {
-        tapsPerSec = CGFloat(nullCounter / coeffitient)
+        tapsPerSec = CGFloat(nullCounter)
         nullCounter = 0
     }
 }
