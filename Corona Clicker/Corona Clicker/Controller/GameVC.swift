@@ -29,6 +29,20 @@ class GameVC: UIViewController {
     var nullCounter = 0
     var purshasedCoeffitient = 1
     
+    var currentVirus: Int {
+        set {
+            UserDefaults.standard.set(newValue, forKey: "currentVirusDataKey")
+            UserDefaults.standard.synchronize()
+        }
+        get{
+            if let currentVirusData = UserDefaults.standard.integer(forKey: "currentVirusDataKey") as? Int {
+                return currentVirusData
+            }
+            else {
+                return 0
+            }
+        }
+    }
     var totalGameStarted: Bool {
         set {
             UserDefaults.standard.set(newValue, forKey: "gameStartedDataKey")
@@ -36,7 +50,6 @@ class GameVC: UIViewController {
         }
         get {
             if let gameStartedData = UserDefaults.standard.bool(forKey: "gameStartedDataKey") as? Bool {
-                print(gameStartedData)
                 return gameStartedData
             }
             else {

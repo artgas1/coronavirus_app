@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		03181A2E2426B1EC005343C4 /* DataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03181A2D2426B1EC005343C4 /* DataService.swift */; };
 		0322032624242C3D0080145E /* UIProgressViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0322032524242C3D0080145E /* UIProgressViewExtension.swift */; };
 		5646CEAB24267292001A6CC9 /* CustomizeTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5646CEAA24267292001A6CC9 /* CustomizeTVC.swift */; };
 		5679DC0C24228D8A00965598 /* UIImageViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5679DC0B24228D8A00965598 /* UIImageViewExtension.swift */; };
@@ -32,6 +33,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		03181A2D2426B1EC005343C4 /* DataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataService.swift; sourceTree = "<group>"; };
 		0322032524242C3D0080145E /* UIProgressViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIProgressViewExtension.swift; sourceTree = "<group>"; };
 		5646CEAA24267292001A6CC9 /* CustomizeTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomizeTVC.swift; sourceTree = "<group>"; };
 		5679DC0B24228D8A00965598 /* UIImageViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageViewExtension.swift; sourceTree = "<group>"; };
@@ -163,6 +165,7 @@
 				56F018A424222B2500A816B0 /* Base.swift */,
 				56CD25622421931800D00880 /* AppDelegate.swift */,
 				56CD25642421931800D00880 /* SceneDelegate.swift */,
+				03181A2D2426B1EC005343C4 /* DataService.swift */,
 			);
 			path = Other;
 			sourceTree = "<group>";
@@ -269,6 +272,7 @@
 				0322032624242C3D0080145E /* UIProgressViewExtension.swift in Sources */,
 				56F018A32422273E00A816B0 /* GameVC.swift in Sources */,
 				56DC560924242C20003D411A /* UIButton.swift in Sources */,
+				03181A2E2426B1EC005343C4 /* DataService.swift in Sources */,
 				56C608202426806500F106E0 /* Item.swift in Sources */,
 				56DC560D24243BE3003D411A /* MenuVC.swift in Sources */,
 				5679DC0C24228D8A00965598 /* UIImageViewExtension.swift in Sources */,

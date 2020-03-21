@@ -13,11 +13,6 @@ class CustomizeTVC: UITableViewController {
     let titleBar = "TitleBar"
     let TVCCell = "TVCCell"
     
-    let defaultItems: [Item] = [
-        Item.init(image: UIImage(named: Base.basicCorona)!, title: "Basic\n SARS-COV-2"),
-        Item.init(image: UIImage(named: Base.rareCorona)!, title: "Rare\n SARS-COV-2"),
-        Item.init(image: UIImage(named: Base.toxicCorona)!, title: "Toxic\n SARS-COV-2")
-    ]
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -50,7 +45,7 @@ class CustomizeTVC: UITableViewController {
             return cell
         } else {
             let cell = tableView.dequeueReusableCell(withIdentifier: TVCCell, for: indexPath) as! TVCCell
-            cell.configure(items: defaultItems)
+            cell.configure(items: DataService.Items)
             return cell
         }
     }
