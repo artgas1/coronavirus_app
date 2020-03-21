@@ -14,12 +14,13 @@
 		56CD256A2421931800D00880 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 56CD25682421931800D00880 /* Main.storyboard */; };
 		56CD256C2421931B00D00880 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 56CD256B2421931B00D00880 /* Assets.xcassets */; };
 		56CD256F2421931B00D00880 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 56CD256D2421931B00D00880 /* LaunchScreen.storyboard */; };
-		56DC560724242332003D411A /* Bungee-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 56DC560624242332003D411A /* Bungee-Regular.otf */; };
 		56DC560924242C20003D411A /* UIButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56DC560824242C20003D411A /* UIButton.swift */; };
 		56DC560B24243A9D003D411A /* UIViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56DC560A24243A9D003D411A /* UIViewExtension.swift */; };
 		56DC560D24243BE3003D411A /* MenuVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56DC560C24243BE3003D411A /* MenuVC.swift */; };
 		56E469672424EE2100C0D6FD /* AlertView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56E469662424EE2100C0D6FD /* AlertView.swift */; };
 		56E469692424F52A00C0D6FD /* UIVCExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56E469682424F52A00C0D6FD /* UIVCExtension.swift */; };
+		56E4696B242541BB00C0D6FD /* Bungee-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 56E4696A242541BB00C0D6FD /* Bungee-Regular.otf */; };
+		56E4696E2425665900C0D6FD /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 56E4696D2425665900C0D6FD /* StoreKit.framework */; };
 		56F018A32422273E00A816B0 /* GameVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56F018A22422273E00A816B0 /* GameVC.swift */; };
 		56F018A524222B2500A816B0 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56F018A424222B2500A816B0 /* Constants.swift */; };
 		56F018AC2422856E00A816B0 /* UILabelExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56F018AB2422856E00A816B0 /* UILabelExtension.swift */; };
@@ -35,12 +36,13 @@
 		56CD256B2421931B00D00880 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		56CD256E2421931B00D00880 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		56CD25702421931B00D00880 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		56DC560624242332003D411A /* Bungee-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Bungee-Regular.otf"; path = "/Users/andrejhromov/programms/IOS/Apps/CoronaApp/coronavirus_app/Corona Clicker/Corona Clicker/Resources/Bungee-Regular.otf"; sourceTree = "<absolute>"; };
 		56DC560824242C20003D411A /* UIButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIButton.swift; sourceTree = "<group>"; };
 		56DC560A24243A9D003D411A /* UIViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewExtension.swift; sourceTree = "<group>"; };
 		56DC560C24243BE3003D411A /* MenuVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuVC.swift; sourceTree = "<group>"; };
 		56E469662424EE2100C0D6FD /* AlertView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertView.swift; sourceTree = "<group>"; };
 		56E469682424F52A00C0D6FD /* UIVCExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIVCExtension.swift; sourceTree = "<group>"; };
+		56E4696A242541BB00C0D6FD /* Bungee-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Bungee-Regular.otf"; sourceTree = "<group>"; };
+		56E4696D2425665900C0D6FD /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
 		56F018A22422273E00A816B0 /* GameVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameVC.swift; sourceTree = "<group>"; };
 		56F018A424222B2500A816B0 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		56F018AB2422856E00A816B0 /* UILabelExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UILabelExtension.swift; sourceTree = "<group>"; };
@@ -51,6 +53,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				56E4696E2425665900C0D6FD /* StoreKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -62,6 +65,7 @@
 			children = (
 				56CD25612421931800D00880 /* Corona Clicker */,
 				56CD25602421931800D00880 /* Products */,
+				56E4696C2425665900C0D6FD /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -93,7 +97,7 @@
 		56CD2576242193B100D00880 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				56DC560624242332003D411A /* Bungee-Regular.otf */,
+				56E4696A242541BB00C0D6FD /* Bungee-Regular.otf */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -132,6 +136,14 @@
 			path = Other;
 			sourceTree = "<group>";
 		};
+		56E4696C2425665900C0D6FD /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				56E4696D2425665900C0D6FD /* StoreKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		56F018A82422823000A816B0 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
@@ -140,10 +152,7 @@
 				56DC560824242C20003D411A /* UIButton.swift */,
 				56DC560A24243A9D003D411A /* UIViewExtension.swift */,
 				0322032524242C3D0080145E /* UIProgressViewExtension.swift */,
-<<<<<<< HEAD
 				56E469682424F52A00C0D6FD /* UIVCExtension.swift */,
-=======
->>>>>>> 0d7cbfa151d6de8cee553189392b6ec2062ad4cd
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -209,7 +218,7 @@
 				56CD256F2421931B00D00880 /* LaunchScreen.storyboard in Resources */,
 				56CD256C2421931B00D00880 /* Assets.xcassets in Resources */,
 				56CD256A2421931800D00880 /* Main.storyboard in Resources */,
-				56DC560724242332003D411A /* Bungee-Regular.otf in Resources */,
+				56E4696B242541BB00C0D6FD /* Bungee-Regular.otf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -385,7 +394,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "georgefed.Corona-Clicker";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -403,7 +412,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "georgefed.Corona-Clicker";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

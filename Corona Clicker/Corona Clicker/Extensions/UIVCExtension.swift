@@ -10,29 +10,19 @@ import UIKit
 
 extension UIViewController {
     
-    func showUpperAlert() {
+    func showUpperAlert(title: String, text: String, countdown: Double) {
         print("show upper alert")
         let width:CGFloat = screenWidth - 2 * xConstraint
         let height: CGFloat = 128
         let frame = CGRect(x: xConstraint, y: 0, width: width, height: height)
-        let center = CGPoint(x: self.view.center.x, y: -128.0)
-        let color = #colorLiteral(red: 0.04705882353, green: 0.06274509804, blue: 0.09019607843, alpha: 1)
+        let color = #colorLiteral(red: 0.05091900378, green: 0.07848060876, blue: 0.1187762991, alpha: 1)
         
-        let duration = 0.5
-        let offsetY: CGFloat = 81.0
-        
-        let alert = AlertView(frame: frame, center: center, radius: 5.0, transparency: 0.9, background: color)
+        let alert = AlertView(frame: frame, countdown: countdown, radius: 5.0, transpernecy: 0.95, background: color)
         self.view.addSubview(alert)
-        
-        alert.appear(duration: duration, offsetY: offsetY) {
-            self.startCountdown()
-        }
+        alert.addTitle(title: title)
+        alert.addText(text: text)
+        alert.appear()
     }
-    
-    func startCountdown() {
-        print("Countdown started")
-    }
-    
     var screenWidth: CGFloat {
         return self.view.frame.width
     }

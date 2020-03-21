@@ -28,7 +28,7 @@ class GameVC: UIViewController {
     var tapsPerSec: CGFloat = 0.0
     var coeffitient = 1
     var nullCounter = 0
-    var goal = 1000
+    var goal = 10
     var purshasedCoeffitient = 1
     
     let worldPopulation = 7783970600
@@ -76,6 +76,12 @@ class GameVC: UIViewController {
         progressLabel.text = "\(counter)/\(goal)"
         progressBar.progress = Float(counter) / Float(goal)
         counterTextOutputs(counter: 1*coeffitient)
+        
+        if counter >= goal {
+            self.showUpperAlert(title: "Fascinating!", text: "The virus is spreading rapidly! You have infected \(goal) people.", countdown: 3)
+            goal *= 10
+        }
+        if goal >= worldPopulation {goal = worldPopulation}
         
         virus.scaleOutIn(duration: duration, delay: delay, scaleX: scaleX, scaleY: scaleY)
     }
@@ -142,9 +148,6 @@ class GameVC: UIViewController {
         else if runCounter > 10.0 && tapsPerSec > 10.0 { coeffitient = 3 * purshasedCoeffitient}
         else if runCounter > 5.0 && tapsPerSec > 5.0 { coeffitient = 2 * purshasedCoeffitient}
         else { coeffitient = 1 * purshasedCoeffitient}
-        
-        if counter >= goal {goal *= 10}
-        if goal >= worldPopulation {goal = worldPopulation}
         
         multiplyer.text = "X\(coeffitient)"
     }
