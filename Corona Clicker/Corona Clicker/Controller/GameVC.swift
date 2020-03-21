@@ -23,13 +23,40 @@ class GameVC: UIViewController {
     
     // MARK: - Stats
     var gameStarted = false
-    var counter = 0
     var runCounter: CGFloat = 0.0
     var tapsPerSec: CGFloat = 0.0
     var coeffitient = 1
     var nullCounter = 0
-    var goal = 10
     var purshasedCoeffitient = 1
+    
+    var counter: Int {
+        set {
+            UserDefaults.standard.set(newValue, forKey: "counterDataKey")
+            UserDefaults.standard.synchronize()
+        }
+        get{
+            if let counterData = UserDefaults.standard.integer(forKey: "counterDataKey") as? Int{
+                return counterData
+            }
+            else {
+                return 0
+            }
+        }
+    }
+    var goal: Int {
+        set {
+            UserDefaults.standard.set(newValue, forKey: "goalDataKey")
+            UserDefaults.standard.synchronize()
+        }
+        get{
+            if let goalData = UserDefaults.standard.integer(forKey: "goalDataKey") as? Int{
+                return goalData
+            }
+            else {
+                return 10
+            }
+        }
+    }
     
     let worldPopulation = 7783970600
     
@@ -159,7 +186,7 @@ class GameVC: UIViewController {
     
 
     @objc func peopleCounter() {
-        tapsPerSec = CGFloat(nullCounter)
+        tapsPerSec = CGFloat(nullCounter / coeffitient)
         nullCounter = 0
     }
 }
