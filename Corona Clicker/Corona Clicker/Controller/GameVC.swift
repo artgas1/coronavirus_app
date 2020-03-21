@@ -29,13 +29,17 @@ class GameVC: UIViewController {
     var nullCounter = 0
     var purshasedCoeffitient = 1
     
+    let gameStartedKey = "gameStartedDataKey"
+    let counterDataKey = "counterDataKey"
+    let goalDataKey = "goalDataKey"
+    
     var totalGameStarted: Bool {
         set {
-            UserDefaults.standard.set(newValue, forKey: "gameStartedDataKey")
+            UserDefaults.standard.set(newValue, forKey: gameStartedKey)
             UserDefaults.standard.synchronize()
         }
         get {
-            if let gameStartedData = UserDefaults.standard.bool(forKey: "gameStartedDataKey") as? Bool {
+            if let gameStartedData = UserDefaults.standard.bool(forKey: gameStartedKey) as? Bool {
                 print(gameStartedData)
                 return gameStartedData
             }
@@ -44,13 +48,14 @@ class GameVC: UIViewController {
             }
         }
     }
+    
     var counter: Int {
         set {
-            UserDefaults.standard.set(newValue, forKey: "counterDataKey")
+            UserDefaults.standard.set(newValue, forKey: counterDataKey)
             UserDefaults.standard.synchronize()
         }
         get{
-            if let counterData = UserDefaults.standard.integer(forKey: "counterDataKey") as? Int{
+            if let counterData = UserDefaults.standard.integer(forKey: counterDataKey) as? Int {
                 return counterData
             }
             else {
@@ -58,14 +63,15 @@ class GameVC: UIViewController {
             }
         }
     }
+    
     var goal: Int {
         set {
-            UserDefaults.standard.set(newValue, forKey: "goalDataKey")
+            UserDefaults.standard.set(newValue, forKey: goalDataKey)
             UserDefaults.standard.synchronize()
         }
         get{
-            if let goalData = UserDefaults.standard.integer(forKey: "goalDataKey") as? Int{
-                if goalData > 10{
+            if let goalData = UserDefaults.standard.integer(forKey: goalDataKey) as? Int{
+                if goalData > 10 {
                     return goalData
                 }
                 else {
