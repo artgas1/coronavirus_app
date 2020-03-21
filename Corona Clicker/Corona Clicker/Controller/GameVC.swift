@@ -23,13 +23,60 @@ class GameVC: UIViewController {
     
     // MARK: - Stats
     var gameStarted = false
-    var counter = 0
     var runCounter: CGFloat = 0.0
     var tapsPerSec: CGFloat = 0.0
     var coeffitient = 1
     var nullCounter = 0
-    var goal = 10
     var purshasedCoeffitient = 1
+    
+    var totalGameStarted: Bool {
+        set {
+            UserDefaults.standard.set(newValue, forKey: "gameStartedDataKey")
+            UserDefaults.standard.synchronize()
+        }
+        get {
+            if let gameStartedData = UserDefaults.standard.bool(forKey: "gameStartedDataKey") as? Bool {
+                print(gameStartedData)
+                return gameStartedData
+            }
+            else {
+                return false
+            }
+        }
+    }
+    var counter: Int {
+        set {
+            UserDefaults.standard.set(newValue, forKey: "counterDataKey")
+            UserDefaults.standard.synchronize()
+        }
+        get{
+            if let counterData = UserDefaults.standard.integer(forKey: "counterDataKey") as? Int{
+                return counterData
+            }
+            else {
+                return 0
+            }
+        }
+    }
+    var goal: Int {
+        set {
+            UserDefaults.standard.set(newValue, forKey: "goalDataKey")
+            UserDefaults.standard.synchronize()
+        }
+        get{
+            if let goalData = UserDefaults.standard.integer(forKey: "goalDataKey") as? Int{
+                if goalData > 10{
+                    return goalData
+                }
+                else {
+                    return 10
+                }
+            }
+            else {
+                return 10
+            }
+        }
+    }
     
     let worldPopulation = 7783970600
     
@@ -49,12 +96,19 @@ class GameVC: UIViewController {
     
     override func viewDidLoad() {
         multiplyer.text = "X1"
-        tapCounter.text = "0 INFECTED"
+        tapCounter.text = "\(counter) INFECTED"
         tapSpeed.text = "0.0 people per second"
         menuBtn.titleLabel?.font = UIFont(name: "Bungee-Regular", size: 24)
         progressLabel.text = "0/\(goal)"
+        
+        if totalGameStarted {callToAction.text = "Tap to continue"}
+        
         observeTaps()
         super.viewDidLoad()
+    }
+    
+    override var prefersStatusBarHidden: Bool {
+        return true
     }
     
     // MARK: - Virus Taps
@@ -67,6 +121,7 @@ class GameVC: UIViewController {
     @objc func onVirusTap() {
         if !gameStarted {
             gameStarted = true
+            totalGameStarted = true
             startTimer()
             changeAppearence()
         }
