@@ -85,6 +85,7 @@ extension TVCCell: UICollectionViewDelegate, UICollectionViewDataSource, UIColle
             if let cell = collectionView.cellForItem(at: indexPath) as? ItemCell {
                 cell.animateSelection()
                 DataService.currentItemID = indexPath.item
+                NotificationCenter.default.post(name: .updateVirus, object: nil)
             }
         }
     }

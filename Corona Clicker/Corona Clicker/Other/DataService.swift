@@ -12,9 +12,15 @@ import UIKit
 class DataService{
     static var currentItemID: Int = 0
     
+    static let viruses: [Item] = [
+        Item.init(image: Base.coronaImages[0], title: Base.basicCorona, goal: Base.levels[0]),
+        Item.init(image: Base.coronaImages[1], title: Base.toxicCorona, goal: Base.levels[1]),
+        Item.init(image: Base.coronaImages[2], title: Base.rareCorona, goal: Base.levels[2])
+    ]
+    
     static let items: [Item] = [
-        Item.init(image: UIImage(named: Base.basicCorona)!, title: "Basic\n SARS-COV-2", goal: 0),
-        Item.init(image: UIImage(named: Base.rareCorona)!, title: "Rare\n SARS-COV-2", goal: 1000),
-        Item.init(image: UIImage(named: Base.toxicCorona)!, title: "Toxic\n SARS-COV-2", goal: 100000)
+        Item.init(image: Base.coronaItemsImages[0], title: Base.basicCorona, goal: Base.levels[0]),
+        Item.init(image: Base.coronaItemsImages[1], title: Base.toxicCorona, goal: Base.levels[1]),
+        Item.init(image: Base.coronaItemsImages[2], title: Base.rareCorona, goal: Base.levels[2])
     ]
 }

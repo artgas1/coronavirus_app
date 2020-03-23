@@ -10,7 +10,7 @@ import UIKit
 
 class GameVC: UIViewController {
 
-    @IBOutlet weak var virus: UIImageView!
+    @IBOutlet weak var virusImage: UIImageView!
     @IBOutlet weak var gameTitle: UILabel!
     @IBOutlet weak var gameSubtitle: UILabel!
     @IBOutlet weak var callToAction: UILabel!
@@ -105,21 +105,31 @@ class GameVC: UIViewController {
     let textOffsetX: Int = 0
     let textOffsetY: Int = 128
     
-    let item = DataService.items[DataService.currentItemID]
+    var virus = DataService.viruses[DataService.currentItemID]
     
     @IBOutlet weak var menuBtn: UIButton!
     
     override func viewDidLoad() {
+        setupUI()
+        observeTaps()
+        updateVirusSettings()
+        NotificationCenter.default.addObserver(self, selector: #selector(self.updateVirusSettings), name: .updateVirus, object: nil)
+        super.viewDidLoad()
+    }
+    
+    @objc func updateVirusSettings() {
+        virus = DataService.viruses[DataService.currentItemID]
+        virusImage.image = virus.image
+        purshasedCoeffitient = virus.contaigousness
+    }
+    
+    func setupUI() {
         multiplyer.text = "X1"
         tapCounter.text = "\(counter) INFECTED"
         tapSpeed.text = "0.0 people per second"
         menuBtn.titleLabel?.font = UIFont(name: "Bungee-Regular", size: 24)
         progressLabel.text = "0/\(goal)"
-        
         if totalGameStarted {callToAction.text = "Tap to continue"}
-        
-        observeTaps()
-        super.viewDidLoad()
     }
     
     override var prefersStatusBarHidden: Bool {
@@ -129,8 +139,8 @@ class GameVC: UIViewController {
     // MARK: - Virus Taps
     func observeTaps() {
         let gesture = UITapGestureRecognizer(target: self, action: #selector(self.onVirusTap))
-        virus.isUserInteractionEnabled = true
-        virus.addGestureRecognizer(gesture)
+        virusImage.isUserInteractionEnabled = true
+        virusImage.addGestureRecognizer(gesture)
     }
     
     @objc func onVirusTap() {
@@ -153,7 +163,7 @@ class GameVC: UIViewController {
         }
         if goal >= worldPopulation {goal = worldPopulation}
         
-        virus.scaleOutIn(duration: duration, delay: delay, scaleX: scaleX, scaleY: scaleY)
+        virusImage.scaleOutIn(duration: duration, delay: delay, scaleX: scaleX, scaleY: scaleY)
     }
     
     func counterTextOutputs(counter: Int) {
@@ -170,11 +180,11 @@ class GameVC: UIViewController {
     }
     
     var labelX: Int {
-        return Int(virus.frame.origin.x) + 36 + Int(arc4random()) % (Int(virus.frame.height) - 64)
+        return Int(virusImage.frame.origin.x) + 36 + Int(arc4random()) % (Int(virusImage.frame.height) - 64)
     }
     
     var labelY: Int {
-        return Int(virus.frame.origin.y) + 36 + Int(arc4random()) % (Int(virus.frame.width) - 64)
+        return Int(virusImage.frame.origin.y) + 36 + Int(arc4random()) % (Int(virusImage.frame.width) - 64)
     }
     
     // MARK: - On First Tap
