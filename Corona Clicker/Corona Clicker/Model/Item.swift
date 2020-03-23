@@ -18,6 +18,7 @@ class Item {
     public var mutation: Int = 1
     
     public var isLocked: Bool = false
+    public var purchaseID: String?
     
     required init(image: UIImage, title: String, goal: Int) {
         self.image = image
