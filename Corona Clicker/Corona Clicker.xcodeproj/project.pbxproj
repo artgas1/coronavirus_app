@@ -10,6 +10,7 @@
 		03181A2E2426B1EC005343C4 /* DataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03181A2D2426B1EC005343C4 /* DataService.swift */; };
 		03181A32242953DB005343C4 /* PurchaseVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03181A31242953DA005343C4 /* PurchaseVC.swift */; };
 		0322032624242C3D0080145E /* UIProgressViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0322032524242C3D0080145E /* UIProgressViewExtension.swift */; };
+		561A166C242965C400ECB5ED /* RadialGradient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 561A166B242965C400ECB5ED /* RadialGradient.swift */; };
 		5646CEAB24267292001A6CC9 /* CustomizeTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5646CEAA24267292001A6CC9 /* CustomizeTVC.swift */; };
 		5679DC0C24228D8A00965598 /* UIImageViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5679DC0B24228D8A00965598 /* UIImageViewExtension.swift */; };
 		5696D93924267CAA007AC9C1 /* TitleCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5696D93824267CAA007AC9C1 /* TitleCell.swift */; };
@@ -37,6 +38,7 @@
 		03181A2D2426B1EC005343C4 /* DataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataService.swift; sourceTree = "<group>"; };
 		03181A31242953DA005343C4 /* PurchaseVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PurchaseVC.swift; sourceTree = "<group>"; };
 		0322032524242C3D0080145E /* UIProgressViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIProgressViewExtension.swift; sourceTree = "<group>"; };
+		561A166B242965C400ECB5ED /* RadialGradient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RadialGradient.swift; sourceTree = "<group>"; };
 		5646CEAA24267292001A6CC9 /* CustomizeTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomizeTVC.swift; sourceTree = "<group>"; };
 		5679DC0B24228D8A00965598 /* UIImageViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageViewExtension.swift; sourceTree = "<group>"; };
 		5696D93824267CAA007AC9C1 /* TitleCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleCell.swift; sourceTree = "<group>"; };
@@ -147,6 +149,7 @@
 			isa = PBXGroup;
 			children = (
 				56E469662424EE2100C0D6FD /* AlertView.swift */,
+				561A166B242965C400ECB5ED /* RadialGradient.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -280,6 +283,7 @@
 				56DC560D24243BE3003D411A /* MenuVC.swift in Sources */,
 				5679DC0C24228D8A00965598 /* UIImageViewExtension.swift in Sources */,
 				03181A32242953DB005343C4 /* PurchaseVC.swift in Sources */,
+				561A166C242965C400ECB5ED /* RadialGradient.swift in Sources */,
 				56DC560B24243A9D003D411A /* UIViewExtension.swift in Sources */,
 				56E469692424F52A00C0D6FD /* UIVCExtension.swift in Sources */,
 				5696D93924267CAA007AC9C1 /* TitleCell.swift in Sources */,

@@ -107,14 +107,27 @@ class GameVC: UIViewController {
     
     var virus = DataService.viruses[DataService.currentItemID]
     
+    let radialGradient = RadialGradientView()
+    
     @IBOutlet weak var menuBtn: UIButton!
     
     override func viewDidLoad() {
         setupUI()
         observeTaps()
         updateVirusSettings()
+        updateRadialGradient()
         NotificationCenter.default.addObserver(self, selector: #selector(self.updateVirusSettings), name: .updateVirus, object: nil)
         super.viewDidLoad()
+    }
+    
+    func updateRadialGradient() {
+        let frame = self.view.frame
+        radialGradient.frame = frame
+        radialGradient.center = self.view.center
+        radialGradient.colors = [.red, .clear]
+        radialGradient.radius = 256.0
+        self.view.addSubview(radialGradient)
+        self.view.sendSubviewToBack(radialGradient)
     }
     
     @objc func updateVirusSettings() {
@@ -224,10 +237,19 @@ class GameVC: UIViewController {
         tapSpeed.text = "\(tapsPerSec) people per second"
         tapSpeed.text = String(format: "%.2f people per second", tapsPerSec)
         
-        if runCounter > 15.0 && tapsPerSec > 15.0 { coeffitient = 5 * purshasedCoeffitient}
-        else if runCounter > 10.0 && tapsPerSec > 10.0 { coeffitient = 3 * purshasedCoeffitient}
-        else if runCounter > 5.0 && tapsPerSec > 5.0 { coeffitient = 2 * purshasedCoeffitient}
-        else { coeffitient = 1 * purshasedCoeffitient}
+        radialGradient.intensify(k: 1.0 + tapsPerSec * 2 / 100)
+        if runCounter > 15.0 && tapsPerSec > 15.0 {
+            coeffitient = 5 * purshasedCoeffitient
+        }
+        else if runCounter > 10.0 && tapsPerSec > 10.0 {
+            coeffitient = 3 * purshasedCoeffitient
+        }
+        else if runCounter > 5.0 && tapsPerSec > 5.0 {
+            coeffitient = 2 * purshasedCoeffitient
+        }
+        else {
+            coeffitient = 1 * purshasedCoeffitient
+        }
         
         multiplyer.text = "X\(coeffitient)"
     }
