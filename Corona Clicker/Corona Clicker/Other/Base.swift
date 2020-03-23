@@ -9,22 +9,28 @@
 import UIKit
 
 public struct Base {
-    static public let basicCorona = "BasicCorona"
-    static public let toxicCorona = "ToxicCorona"
-    static public let rareCorona = "RareCorona"
-    static public let lockedCorona = "LockedCorona"
+    static public let basicCorona = "Basic\nVirus"
+    static public let toxicCorona = "Toxic\nVirus"
+    static public let rareCorona = "Rare\nVirus"
+    static public let lockedCorona = "Locked\nVirus"
 
     static let coronaImages: [UIImage] = [
         UIImage(named: "corona")!,
-        UIImage(named: "RareCorona1")!,
-        UIImage(named: "ToxicCorona1")!
+        UIImage(named: "ToxicCorona1")!,
+        UIImage(named: "RareCorona1")!
     ]
     
     static let coronaItemsImages: [UIImage] = [
         UIImage(named: "BasicCorona")!,
-        UIImage(named: "RareCorona")!,
-        UIImage(named: "ToxicCorona")!
+        UIImage(named: "ToxicCorona")!,
+        UIImage(named: "RareCorona")!
     ]
     
     static let lockedCoronaImage: UIImage = UIImage(named: "LockedCorona")!
+    
+    static let levels:[Int] = [100, 1000, 1000]
+}
+
+extension Notification.Name {
+    static let updateVirus = Notification.Name("Update Virus")
 }
