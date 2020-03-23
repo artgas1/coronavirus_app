@@ -87,8 +87,16 @@ extension TVCCell: UICollectionViewDelegate, UICollectionViewDataSource, UIColle
                 DataService.currentItemID = indexPath.item
                 NotificationCenter.default.post(name: .updateVirus, object: nil)
             }
+        } else {
+            if let topVC = UIApplication.getTopViewController() {
+                let purchaseVC: PurchaseVC = PurchaseVC()
+                purchaseVC.item = items[indexPath.item]
+                topVC.present(purchaseVC, animated: true, completion: nil)
+                
+            }
         }
     }
+    
     
     func collectionView(_ collectionView: UICollectionView, didDeselectItemAt indexPath: IndexPath) {
         if items[indexPath.item].isLocked != true {

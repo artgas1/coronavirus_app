@@ -17,12 +17,14 @@ class Item {
     public var damage: Int = 1
     public var mutation: Int = 1
     
-    public var isLocked: Bool = false
+    public var isLocked: Bool = true
     public var purchaseID: String?
     
-    required init(image: UIImage, title: String, goal: Int) {
+    required init(image: UIImage, title: String, goal: Int, purchaseID: String = "", isLocked: Bool = true) {
         self.image = image
         self.title = title
         self.goal = goal
+        self.purchaseID = purchaseID
+        self.isLocked = isLocked
     }
 }

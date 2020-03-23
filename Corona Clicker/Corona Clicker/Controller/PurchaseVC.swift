@@ -11,10 +11,13 @@ import StoreKit
 
 class PurchaseVC: UIViewController, SKPaymentTransactionObserver {
     
-    let item: Item! = nil
+    @IBOutlet weak var purchaseVirusImage: UIImageView!
+    public var item: Item!
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        purchaseVirusImage.image = item.image
         
         SKPaymentQueue.default().add(self)
     }
@@ -22,11 +25,9 @@ class PurchaseVC: UIViewController, SKPaymentTransactionObserver {
     @IBAction func purchasePressed(_ sender: Any) {
         if SKPaymentQueue.canMakePayments() {
             let paymentRequest = SKMutablePayment()
-            paymentRequest.productIdentifier = item.purchaseID!
+            paymentRequest.productIdentifier = item!.purchaseID!
             SKPaymentQueue.default().add(paymentRequest)
-        } else {
-            
-        }
+        } 
     }
     
     func paymentQueue(_ queue: SKPaymentQueue, updatedTransactions transactions: [SKPaymentTransaction]) {
