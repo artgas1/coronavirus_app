@@ -63,4 +63,22 @@ extension TVCCell: UICollectionViewDelegate, UICollectionViewDataSource, UIColle
         let itemWidth = ((collectionView.bounds.size.width - marginsAndInsets) / CGFloat(cellsPerRow)).rounded(.down)
         return CGSize(width: itemWidth, height: itemWidth)
     }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        // MARK: - TODO: Add selected implementation
+        if items[indexPath.item].isLocked != true {
+            if let cell = collectionView.cellForItem(at: indexPath) as? ItemCell {
+                cell.animateSelection()
+                DataService.currentItemID = indexPath.item
+            }
+        }
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, didDeselectItemAt indexPath: IndexPath) {
+        if items[indexPath.item].isLocked != true {
+            if let cell = collectionView.cellForItem(at: indexPath) as? ItemCell {
+                cell.deselect()
+            }
+        }
+    }
 }

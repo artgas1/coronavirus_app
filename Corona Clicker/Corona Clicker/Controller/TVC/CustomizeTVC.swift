@@ -45,7 +45,7 @@ class CustomizeTVC: UITableViewController {
             return cell
         } else {
             let cell = tableView.dequeueReusableCell(withIdentifier: TVCCell, for: indexPath) as! TVCCell
-            cell.configure(items: DataService.Items)
+            cell.configure(items: DataService.items)
             return cell
         }
     }

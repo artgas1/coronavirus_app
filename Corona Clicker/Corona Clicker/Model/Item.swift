@@ -9,15 +9,19 @@
 import UIKit
 
 class Item {
-    var image: UIImage!
-    var title: String!
-    var coeffitient: Int!
-    var goal: Int!
+    private(set) var image: UIImage!
+    private(set) var title: String!
+    private(set) var goal: Int!
     
-    required init(image: UIImage, title: String, coeffitient: Int, goal: Int) {
+    public var contaigousness: Int = 1
+    public var damage: Int = 1
+    public var mutation: Int = 1
+    
+    public var isLocked: Bool = false
+    
+    required init(image: UIImage, title: String, goal: Int) {
         self.image = image
         self.title = title
-        self.coeffitient = coeffitient
         self.goal = goal
     }
 }

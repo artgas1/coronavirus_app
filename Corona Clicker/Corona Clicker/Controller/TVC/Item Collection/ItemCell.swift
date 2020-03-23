@@ -23,4 +23,17 @@ class ItemCell: UICollectionViewCell {
         self.itemImage.image = item.image
         self.itemTitle.text = item.title
     }
+    
+    public func animateSelection() {
+        UIView.animate(withDuration: 0.2, delay: 0, options: UIView.AnimationOptions.curveEaseInOut, animations: {
+            self.itemImage.scaleOutIn(duration: 0.2, delay: 0, scaleX: 1.1, scaleY: 1.1)
+            self.itemTitle.textColor = UIColor.red
+        }, completion: nil)
+    }
+    
+    public func deselect() {
+        UIView.animate(withDuration: 0.2, delay: 0, options: UIView.AnimationOptions.curveEaseInOut, animations: {
+            self.itemTitle.textColor = UIColor.white
+        }, completion: nil)
+    }
 }

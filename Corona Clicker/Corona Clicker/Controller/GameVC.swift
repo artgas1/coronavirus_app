@@ -105,6 +105,8 @@ class GameVC: UIViewController {
     let textOffsetX: Int = 0
     let textOffsetY: Int = 128
     
+    let item = DataService.items[DataService.currentItemID]
+    
     @IBOutlet weak var menuBtn: UIButton!
     
     override func viewDidLoad() {
