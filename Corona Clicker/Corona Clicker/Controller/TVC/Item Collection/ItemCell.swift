@@ -20,7 +20,11 @@ class ItemCell: UICollectionViewCell {
     
     public func configure(item: Item) {
         self.item = item
-        self.itemImage.image = item.image
+        if item.isLocked != true {
+            self.itemImage.image = item.image
+        } else {
+            self.itemImage.image = Base.lockedCoronaImage
+        }
         self.itemTitle.text = item.title
     }
     
