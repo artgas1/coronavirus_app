@@ -89,7 +89,7 @@ extension TVCCell: UICollectionViewDelegate, UICollectionViewDataSource, UIColle
             }
         } else {
             if let topVC = UIApplication.getTopViewController() {
-                let purchaseVC: PurchaseVC = PurchaseVC()
+                let purchaseVC = topVC.storyboard?.instantiateViewController(withIdentifier: "PurchaseID") as! PurchaseVC
                 purchaseVC.item = items[indexPath.item]
                 topVC.present(purchaseVC, animated: true, completion: nil)
                 

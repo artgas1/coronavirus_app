@@ -12,16 +12,15 @@ import StoreKit
 class PurchaseVC: UIViewController, SKPaymentTransactionObserver {
     
     @IBOutlet weak var purchaseVirusImage: UIImageView!
-    public var item: Item!
+    public var item: Item?
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        purchaseVirusImage.image = item.image
-        
+        guard let item = self.item as? Item else { return }
+        self.purchaseVirusImage?.image = item.image
         SKPaymentQueue.default().add(self)
     }
-
+    
     @IBAction func purchasePressed(_ sender: Any) {
         if SKPaymentQueue.canMakePayments() {
             let paymentRequest = SKMutablePayment()
