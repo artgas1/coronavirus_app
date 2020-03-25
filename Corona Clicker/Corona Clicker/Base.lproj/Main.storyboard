@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina4_0" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15510"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="collection view cell content view" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -22,13 +22,13 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SARS-COV-2" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5gc-Lu-jkJ">
-                                <rect key="frame" x="27" y="64" width="266.5" height="42.5"/>
+                                <rect key="frame" x="34" y="64" width="252.5" height="49"/>
                                 <fontDescription key="fontDescription" name="Bungee-Regular" family="Bungee" pointSize="42"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="The plague of the XXI Century" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QVf-Mc-qMy">
-                                <rect key="frame" x="23" y="110.5" width="274" height="26"/>
+                                <rect key="frame" x="23" y="117" width="274" height="26"/>
                                 <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="20"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
@@ -41,19 +41,19 @@
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tap to play" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Me5-Up-T7Y">
-                                <rect key="frame" x="93.5" y="396" width="133" height="20"/>
+                                <rect key="frame" x="111" y="396" width="98" height="23.5"/>
                                 <fontDescription key="fontDescription" name="Bungee-Regular" family="Bungee" pointSize="20"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label hidden="YES" opaque="NO" userInteractionEnabled="NO" alpha="0.0" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="567 DECEASED" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Muy-r0-E4Q">
-                                <rect key="frame" x="22.5" y="81" width="275" height="36"/>
+                                <rect key="frame" x="30.5" y="81" width="259.5" height="42"/>
                                 <fontDescription key="fontDescription" name="Bungee-Regular" family="Bungee" pointSize="36"/>
                                 <color key="textColor" red="0.57321560380000003" green="0.01609252207" blue="0.094076193870000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label hidden="YES" opaque="NO" userInteractionEnabled="NO" alpha="0.0" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0.0 People per second" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2Ap-xh-APJ">
-                                <rect key="frame" x="57" y="121" width="206" height="26"/>
+                                <rect key="frame" x="57" y="127" width="206" height="26"/>
                                 <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="20"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
@@ -65,13 +65,13 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label hidden="YES" opaque="NO" userInteractionEnabled="NO" alpha="0.0" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="x2" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="g3f-Ay-nJw">
-                                <rect key="frame" x="135" y="421" width="50" height="36"/>
+                                <rect key="frame" x="140.5" y="421" width="39" height="42"/>
                                 <fontDescription key="fontDescription" name="Bungee-Regular" family="Bungee" pointSize="36"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button hidden="YES" opaque="NO" alpha="0.0" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Umh-5B-HM4">
-                                <rect key="frame" x="235" y="36" width="61" height="32"/>
+                                <rect key="frame" x="237" y="36" width="59" height="36"/>
                                 <fontDescription key="fontDescription" name="Bungee-Regular" family="Bungee" pointSize="20"/>
                                 <state key="normal" title="MENU">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -265,7 +265,7 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="a7q-AN-JY8">
-                                            <rect key="frame" x="135.5" y="47" width="49" height="22"/>
+                                            <rect key="frame" x="125" y="47" width="70" height="22"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="22" id="F2r-9R-LvE"/>
                                             </constraints>
@@ -429,13 +429,22 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="353-sM-7J5">
+                                <rect key="frame" x="280" y="79" width="24" height="24"/>
+                                <state key="normal" image="cross"/>
+                                <connections>
+                                    <action selector="backBtn:" destination="gd6-cf-VBg" eventType="touchUpInside" id="oXm-tW-r9x"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.048515476289999998" green="0.077622570099999996" blue="0.1215744391" alpha="0.59808761503067487" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
                             <constraint firstItem="3Kz-q0-a8m" firstAttribute="leading" secondItem="kEg-UW-bZy" secondAttribute="leading" constant="24" id="7wN-w4-8dI"/>
+                            <constraint firstItem="353-sM-7J5" firstAttribute="top" secondItem="kEg-UW-bZy" secondAttribute="top" constant="79" id="83O-JA-JV7"/>
                             <constraint firstItem="3Kz-q0-a8m" firstAttribute="centerX" secondItem="KZo-jm-xg2" secondAttribute="centerX" id="JVy-jo-uHs"/>
                             <constraint firstItem="3Kz-q0-a8m" firstAttribute="centerY" secondItem="KZo-jm-xg2" secondAttribute="centerY" constant="-36" id="XKQ-o1-Ykf"/>
                             <constraint firstItem="kEg-UW-bZy" firstAttribute="trailing" secondItem="3Kz-q0-a8m" secondAttribute="trailing" constant="24" id="XZS-cy-dNv"/>
+                            <constraint firstItem="353-sM-7J5" firstAttribute="leading" secondItem="kEg-UW-bZy" secondAttribute="leading" constant="280" id="dpW-p7-PPj"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="kEg-UW-bZy"/>
                     </view>
@@ -452,5 +461,6 @@
     <resources>
         <image name="Back" width="18" height="21"/>
         <image name="corona" width="325" height="331"/>
+        <image name="cross" width="24" height="24"/>
     </resources>
 </document>

@@ -21,6 +21,9 @@ class PurchaseVC: UIViewController, SKPaymentTransactionObserver {
         SKPaymentQueue.default().add(self)
     }
     
+    @IBAction func backBtn(_ sender: Any) {
+        self.dismiss(animated: true, completion: nil)
+    }
     @IBAction func purchasePressed(_ sender: Any) {
         if SKPaymentQueue.canMakePayments() {
             let paymentRequest = SKMutablePayment()

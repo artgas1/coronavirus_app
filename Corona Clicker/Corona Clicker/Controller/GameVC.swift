@@ -29,13 +29,18 @@ class GameVC: UIViewController {
     var nullCounter = 0
     var purshasedCoeffitient = 1
     
+    let gameStartedKey = "gameStartedDataKey"
+    let counterKey = "counterDataKey"
+    let goalKey = "goalDataKey"
+    let currentVirusKey = "currentVirusDataKey"
+    
     var currentVirus: Int {
         set {
-            UserDefaults.standard.set(newValue, forKey: "currentVirusDataKey")
+            UserDefaults.standard.set(newValue, forKey: currentVirusKey)
             UserDefaults.standard.synchronize()
         }
         get{
-            if let currentVirusData = UserDefaults.standard.integer(forKey: "currentVirusDataKey") as? Int {
+            if let currentVirusData = UserDefaults.standard.integer(forKey: currentVirusKey) as? Int {
                 return currentVirusData
             }
             else {
@@ -45,11 +50,11 @@ class GameVC: UIViewController {
     }
     var totalGameStarted: Bool {
         set {
-            UserDefaults.standard.set(newValue, forKey: "gameStartedDataKey")
+            UserDefaults.standard.set(newValue, forKey: gameStartedKey)
             UserDefaults.standard.synchronize()
         }
         get {
-            if let gameStartedData = UserDefaults.standard.bool(forKey: "gameStartedDataKey") as? Bool {
+            if let gameStartedData = UserDefaults.standard.bool(forKey: gameStartedKey) as? Bool {
                 return gameStartedData
             }
             else {
@@ -59,11 +64,11 @@ class GameVC: UIViewController {
     }
     var counter: Int {
         set {
-            UserDefaults.standard.set(newValue, forKey: "counterDataKey")
+            UserDefaults.standard.set(newValue, forKey: counterKey)
             UserDefaults.standard.synchronize()
         }
         get{
-            if let counterData = UserDefaults.standard.integer(forKey: "counterDataKey") as? Int{
+            if let counterData = UserDefaults.standard.integer(forKey: counterKey) as? Int{
                 return counterData
             }
             else {
@@ -73,11 +78,11 @@ class GameVC: UIViewController {
     }
     var goal: Int {
         set {
-            UserDefaults.standard.set(newValue, forKey: "goalDataKey")
+            UserDefaults.standard.set(newValue, forKey: goalKey)
             UserDefaults.standard.synchronize()
         }
         get{
-            if let goalData = UserDefaults.standard.integer(forKey: "goalDataKey") as? Int{
+            if let goalData = UserDefaults.standard.integer(forKey: goalKey) as? Int{
                 if goalData > 10{
                     return goalData
                 }
