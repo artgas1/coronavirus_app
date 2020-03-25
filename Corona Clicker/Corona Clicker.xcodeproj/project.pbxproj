@@ -32,6 +32,7 @@
 		56F018A32422273E00A816B0 /* GameVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56F018A22422273E00A816B0 /* GameVC.swift */; };
 		56F018A524222B2500A816B0 /* Base.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56F018A424222B2500A816B0 /* Base.swift */; };
 		56F018AC2422856E00A816B0 /* UILabelExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56F018AB2422856E00A816B0 /* UILabelExtension.swift */; };
+		D5A5B0C8BAEE5B470ACD18C0 /* Pods_Corona_Clicker.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 709D1954290C887BF2C65028 /* Pods_Corona_Clicker.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -62,6 +63,9 @@
 		56F018A22422273E00A816B0 /* GameVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameVC.swift; sourceTree = "<group>"; };
 		56F018A424222B2500A816B0 /* Base.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Base.swift; sourceTree = "<group>"; };
 		56F018AB2422856E00A816B0 /* UILabelExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UILabelExtension.swift; sourceTree = "<group>"; };
+		709D1954290C887BF2C65028 /* Pods_Corona_Clicker.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Corona_Clicker.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8D981B07557175238D1559A4 /* Pods-Corona Clicker.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Corona Clicker.debug.xcconfig"; path = "Target Support Files/Pods-Corona Clicker/Pods-Corona Clicker.debug.xcconfig"; sourceTree = "<group>"; };
+		D096470B39B94718C0A7E643 /* Pods-Corona Clicker.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Corona Clicker.release.xcconfig"; path = "Target Support Files/Pods-Corona Clicker/Pods-Corona Clicker.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -70,12 +74,23 @@
 			buildActionMask = 2147483647;
 			files = (
 				56E4696E2425665900C0D6FD /* StoreKit.framework in Frameworks */,
+				D5A5B0C8BAEE5B470ACD18C0 /* Pods_Corona_Clicker.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0E4C9E96264FE81643BE3B65 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				8D981B07557175238D1559A4 /* Pods-Corona Clicker.debug.xcconfig */,
+				D096470B39B94718C0A7E643 /* Pods-Corona Clicker.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		5696D93C24267CC5007AC9C1 /* TVC */ = {
 			isa = PBXGroup;
 			children = (
@@ -101,6 +116,7 @@
 				56CD25612421931800D00880 /* Corona Clicker */,
 				56CD25602421931800D00880 /* Products */,
 				56E4696C2425665900C0D6FD /* Frameworks */,
+				0E4C9E96264FE81643BE3B65 /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -180,6 +196,7 @@
 			isa = PBXGroup;
 			children = (
 				56E4696D2425665900C0D6FD /* StoreKit.framework */,
+				709D1954290C887BF2C65028 /* Pods_Corona_Clicker.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -204,9 +221,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 56CD25732421931B00D00880 /* Build configuration list for PBXNativeTarget "Corona Clicker" */;
 			buildPhases = (
+				6090FF0E2C268B4469A3CBBE /* [CP] Check Pods Manifest.lock */,
 				56CD255B2421931800D00880 /* Sources */,
 				56CD255C2421931800D00880 /* Frameworks */,
 				56CD255D2421931800D00880 /* Resources */,
+				ED5CE54D5A5C59EFE79F88F2 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -263,6 +282,48 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		6090FF0E2C268B4469A3CBBE /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Corona Clicker-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		ED5CE54D5A5C59EFE79F88F2 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Corona Clicker/Pods-Corona Clicker-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Corona Clicker/Pods-Corona Clicker-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Corona Clicker/Pods-Corona Clicker-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		56CD255B2421931800D00880 /* Sources */ = {
@@ -430,6 +491,7 @@
 		};
 		56CD25742421931B00D00880 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8D981B07557175238D1559A4 /* Pods-Corona Clicker.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -448,6 +510,7 @@
 		};
 		56CD25752421931B00D00880 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D096470B39B94718C0A7E643 /* Pods-Corona Clicker.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
