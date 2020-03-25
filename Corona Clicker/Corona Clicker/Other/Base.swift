@@ -26,7 +26,7 @@ public struct Base {
         UIImage(named: "RareCorona")!
     ]
     
-    static let lockedCoronaImage: UIImage = UIImage(named: "LockedCorona")!
+    static let lockedCoronaImage: UIImage = UIImage(named: "LockedVirus")!
     
     static let levels:[Int] = [100, 1000, 1000]
 }

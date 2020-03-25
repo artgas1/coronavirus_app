@@ -17,10 +17,10 @@ class Item {
     public var damage: Int = 1
     public var mutation: Int = 1
     
-    public var isLocked: Bool = true
-    public var purchaseID: String?
+    public var isLocked: Bool!
+    public var purchaseID: String!
     
-    required init(image: UIImage, title: String, goal: Int, purchaseID: String = "", isLocked: Bool = true) {
+    required init(image: UIImage, title: String, goal: Int, purchaseID: String = "", isLocked: Bool = false) {
         self.image = image
         self.title = title
         self.goal = goal

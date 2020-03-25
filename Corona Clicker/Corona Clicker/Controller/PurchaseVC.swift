@@ -24,7 +24,7 @@ class PurchaseVC: UIViewController, SKPaymentTransactionObserver {
     @IBAction func purchasePressed(_ sender: Any) {
         if SKPaymentQueue.canMakePayments() {
             let paymentRequest = SKMutablePayment()
-            paymentRequest.productIdentifier = item!.purchaseID!
+            paymentRequest.productIdentifier = item!.purchaseID
             SKPaymentQueue.default().add(paymentRequest)
         } 
     }
