@@ -157,9 +157,9 @@
 			isa = PBXGroup;
 			children = (
 				56F018A22422273E00A816B0 /* GameVC.swift */,
-				03181A31242953DA005343C4 /* PurchaseVC.swift */,
 				56DC560C24243BE3003D411A /* MenuVC.swift */,
 				5696D93C24267CC5007AC9C1 /* TVC */,
+				03181A31242953DA005343C4 /* PurchaseVC.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
