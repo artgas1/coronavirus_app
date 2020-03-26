@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina4_0" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15510"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16086"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="collection view cell content view" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -18,60 +18,60 @@
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="GameVC" customModule="Corona_Clicker" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SARS-COV-2" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5gc-Lu-jkJ">
-                                <rect key="frame" x="174" y="64" width="252.5" height="49"/>
+                                <rect key="frame" x="27" y="64" width="266.5" height="42.5"/>
                                 <fontDescription key="fontDescription" name="Bungee-Regular" family="Bungee" pointSize="42"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="The plague of the XXI Century" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QVf-Mc-qMy">
-                                <rect key="frame" x="163" y="117" width="274" height="26"/>
+                                <rect key="frame" x="23" y="110.5" width="274" height="26"/>
                                 <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="20"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <imageView clipsSubviews="YES" multipleTouchEnabled="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="corona" translatesAutoresizingMaskIntoConstraints="NO" id="PxA-a0-YqG">
-                                <rect key="frame" x="56" y="40" width="488" height="488"/>
+                                <rect key="frame" x="56" y="164" width="208" height="208"/>
                                 <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="PxA-a0-YqG" secondAttribute="height" multiplier="1:1" id="4tF-ip-Tvw"/>
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tap to play" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Me5-Up-T7Y">
-                                <rect key="frame" x="251" y="552" width="98" height="23.5"/>
+                                <rect key="frame" x="93.5" y="396" width="133" height="20"/>
                                 <fontDescription key="fontDescription" name="Bungee-Regular" family="Bungee" pointSize="20"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label hidden="YES" opaque="NO" userInteractionEnabled="NO" alpha="0.0" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="567 DECEASED" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Muy-r0-E4Q">
-                                <rect key="frame" x="170.5" y="81" width="259.5" height="42"/>
+                                <rect key="frame" x="22.5" y="81" width="275" height="36"/>
                                 <fontDescription key="fontDescription" name="Bungee-Regular" family="Bungee" pointSize="36"/>
                                 <color key="textColor" red="0.57321560380000003" green="0.01609252207" blue="0.094076193870000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label hidden="YES" opaque="NO" userInteractionEnabled="NO" alpha="0.0" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0.0 People per second" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2Ap-xh-APJ">
-                                <rect key="frame" x="197" y="127" width="206" height="26"/>
+                                <rect key="frame" x="57" y="121" width="206" height="26"/>
                                 <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="20"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label hidden="YES" opaque="NO" userInteractionEnabled="NO" alpha="0.0" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="CONTAIGOUSNESS" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Tk1-fa-x8h">
-                                <rect key="frame" x="218" y="552" width="164" height="21"/>
+                                <rect key="frame" x="78" y="396" width="164" height="21"/>
                                 <fontDescription key="fontDescription" name="Futura-Bold" family="Futura" pointSize="16"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label hidden="YES" opaque="NO" userInteractionEnabled="NO" alpha="0.0" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="x2" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="g3f-Ay-nJw">
-                                <rect key="frame" x="280.5" y="577" width="39" height="42"/>
+                                <rect key="frame" x="135" y="421" width="50" height="36"/>
                                 <fontDescription key="fontDescription" name="Bungee-Regular" family="Bungee" pointSize="36"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button hidden="YES" opaque="NO" alpha="0.0" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Umh-5B-HM4">
-                                <rect key="frame" x="517" y="36" width="59" height="36"/>
+                                <rect key="frame" x="235" y="36" width="61" height="32"/>
                                 <fontDescription key="fontDescription" name="Bungee-Regular" family="Bungee" pointSize="20"/>
                                 <state key="normal" title="MENU">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -127,7 +127,7 @@
                         <outlet property="callToAction" destination="Me5-Up-T7Y" id="Pqz-xr-zfo"/>
                         <outlet property="gameSubtitle" destination="QVf-Mc-qMy" id="bFG-VP-uoS"/>
                         <outlet property="gameTitle" destination="5gc-Lu-jkJ" id="1QU-Ed-TiS"/>
-                        <outlet property="menuBtn" destination="Umh-5B-HM4" id="4gC-gu-aGh"/>
+                        <outlet property="menuBtn" destination="Umh-5B-HM4" id="uSl-QX-F9t"/>
                         <outlet property="multiplyer" destination="g3f-Ay-nJw" id="XBo-Rf-8KL"/>
                         <outlet property="multiplyerTitle" destination="Tk1-fa-x8h" id="Uh2-NI-WQx"/>
                         <outlet property="progressBar" destination="4Gj-pq-pOm" id="SUY-Ge-UeJ"/>
@@ -147,17 +147,17 @@
             <objects>
                 <viewController id="Ira-pR-dOD" customClass="MenuVC" customModule="Corona_Clicker" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="1cx-i5-ac9">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dgQ-zK-9fj">
-                                <rect key="frame" x="16" y="50" width="568" height="428"/>
+                                <rect key="frame" x="16" y="34" width="288" height="428"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="nFw-jr-Scg">
-                                        <rect key="frame" x="56" y="102" width="456" height="224"/>
+                                        <rect key="frame" x="56" y="102" width="176" height="224"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qrl-WB-kRU">
-                                                <rect key="frame" x="0.0" y="0.0" width="456" height="64"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="176" height="64"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="64" id="dYn-aX-yRQ"/>
                                                 </constraints>
@@ -176,7 +176,7 @@
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="21T-HK-dGE">
-                                                <rect key="frame" x="0.0" y="80" width="456" height="64"/>
+                                                <rect key="frame" x="0.0" y="80" width="176" height="64"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="64" id="bHi-tK-anZ"/>
                                                 </constraints>
@@ -195,7 +195,7 @@
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4Gu-y8-eQC">
-                                                <rect key="frame" x="0.0" y="160" width="456" height="64"/>
+                                                <rect key="frame" x="0.0" y="160" width="176" height="64"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="64" id="bHK-Pq-TLj"/>
                                                 </constraints>
@@ -253,19 +253,19 @@
             <objects>
                 <tableViewController id="YNd-cP-tEy" customClass="CustomizeTVC" customModule="Corona_Clicker" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="PhM-BV-LDj">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" red="0.052217237649999998" green="0.077709324659999995" blue="0.1176524088" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="TitleBar" rowHeight="88" id="Qef-1B-yZS" customClass="TitleCell" customModule="Corona_Clicker" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="28" width="600" height="88"/>
+                                <rect key="frame" x="0.0" y="28" width="320" height="88"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Qef-1B-yZS" id="TxJ-3g-2NB">
-                                    <rect key="frame" x="0.0" y="0.0" width="600" height="88"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="88"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="a7q-AN-JY8">
-                                            <rect key="frame" x="275.5" y="47" width="49" height="22"/>
+                                            <rect key="frame" x="125" y="47" width="70" height="22"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="22" id="F2r-9R-LvE"/>
                                             </constraints>
@@ -274,7 +274,7 @@
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="va7-jc-YWd">
-                                            <rect key="frame" x="36" y="47" width="36" height="42"/>
+                                            <rect key="frame" x="32" y="47" width="18" height="22"/>
                                             <state key="normal" image="Back"/>
                                         </button>
                                     </subviews>
@@ -292,14 +292,14 @@
                                 </connections>
                             </tableViewCell>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="TVCCell" rowHeight="276" id="Ga6-DV-oxm" customClass="TVCCell" customModule="Corona_Clicker" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="116" width="600" height="276"/>
+                                <rect key="frame" x="0.0" y="116" width="320" height="276"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Ga6-DV-oxm" id="5PQ-5y-LQk">
-                                    <rect key="frame" x="0.0" y="0.0" width="600" height="276"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="276"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="ipW-6z-5f6">
-                                            <rect key="frame" x="0.0" y="0.0" width="600" height="276"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="276"/>
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="qUU-rn-bzj">
                                                 <size key="itemSize" width="176" height="183"/>
@@ -309,7 +309,7 @@
                                             </collectionViewFlowLayout>
                                             <cells>
                                                 <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="Item" id="plG-q6-PBO" customClass="ItemCell" customModule="Corona_Clicker" customModuleProvider="target">
-                                                    <rect key="frame" x="0.0" y="0.0" width="176" height="183"/>
+                                                    <rect key="frame" x="72" y="0.0" width="176" height="183"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="uTG-AZ-XeD">
                                                         <rect key="frame" x="0.0" y="0.0" width="176" height="183"/>
@@ -377,20 +377,20 @@
             <objects>
                 <viewController modalPresentationStyle="overCurrentContext" id="gd6-cf-VBg" customClass="PurchaseVC" customModule="Corona_Clicker" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="KZo-jm-xg2">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3Kz-q0-a8m">
-                                <rect key="frame" x="24" y="106" width="552" height="316"/>
+                                <rect key="frame" x="24" y="90" width="272" height="316"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="3dI-ce-Ttk">
-                                        <rect key="frame" x="16" y="16" width="520" height="520"/>
+                                        <rect key="frame" x="16" y="16" width="240" height="240"/>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="3dI-ce-Ttk" secondAttribute="height" multiplier="1:1" id="g2O-jE-YXJ"/>
                                         </constraints>
                                     </imageView>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rg1-QY-Kl3">
-                                        <rect key="frame" x="16" y="544" width="520" height="44"/>
+                                        <rect key="frame" x="16" y="264" width="240" height="44"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="44" id="7Wk-gb-ovn"/>
                                         </constraints>

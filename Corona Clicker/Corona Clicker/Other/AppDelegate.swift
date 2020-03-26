@@ -7,15 +7,31 @@
 //
 
 import UIKit
+import RealmSwift
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
-
+    var launchedBefore = false
+    
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
+        checkFirstLaunch()
         return true
     }
-
+    
+    func checkFirstLaunch() {
+        launchedBefore = UserDefaults.standard.bool(forKey: Base.launchKey)
+        if !launchedBefore {
+            DataService.isFirstLaunch = true
+            UserDefaults.standard.set(true, forKey: Base.launchKey)
+            createUser()
+        }
+    }
+    
+    func createUser() {
+        let newUser = User(created: Date() as NSDate)
+        RealmService.instance.create(newUser)
+    }
+    
     // MARK: UISceneSession Lifecycle
 
     func application(_ application: UIApplication, configurationForConnecting connectingSceneSession: UISceneSession, options: UIScene.ConnectionOptions) -> UISceneConfiguration {

@@ -3,19 +3,22 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		03181A2E2426B1EC005343C4 /* DataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03181A2D2426B1EC005343C4 /* DataService.swift */; };
 		03181A32242953DB005343C4 /* PurchaseVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03181A31242953DA005343C4 /* PurchaseVC.swift */; };
 		0322032624242C3D0080145E /* UIProgressViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0322032524242C3D0080145E /* UIProgressViewExtension.swift */; };
+		561843DE242C2CF700D1CC97 /* GameVC+UI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 561843DD242C2CF700D1CC97 /* GameVC+UI.swift */; };
 		561A166C242965C400ECB5ED /* RadialGradient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 561A166B242965C400ECB5ED /* RadialGradient.swift */; };
 		5646CEAB24267292001A6CC9 /* CustomizeTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5646CEAA24267292001A6CC9 /* CustomizeTVC.swift */; };
 		5679DC0C24228D8A00965598 /* UIImageViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5679DC0B24228D8A00965598 /* UIImageViewExtension.swift */; };
 		5696D93924267CAA007AC9C1 /* TitleCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5696D93824267CAA007AC9C1 /* TitleCell.swift */; };
 		5696D93B24267CBE007AC9C1 /* TVCCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5696D93A24267CBE007AC9C1 /* TVCCell.swift */; };
 		56970CCC24267E210023246D /* ItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56970CCB24267E210023246D /* ItemCell.swift */; };
+		569B0548242BF98000096E43 /* Database.swift in Sources */ = {isa = PBXBuildFile; fileRef = 569B0547242BF98000096E43 /* Database.swift */; };
+		569B054A242BFFA300096E43 /* RealmService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 569B0549242BFFA300096E43 /* RealmService.swift */; };
 		56C608202426806500F106E0 /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56C6081F2426806500F106E0 /* Item.swift */; };
 		56CD25632421931800D00880 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56CD25622421931800D00880 /* AppDelegate.swift */; };
 		56CD25652421931800D00880 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56CD25642421931800D00880 /* SceneDelegate.swift */; };
@@ -39,12 +42,15 @@
 		03181A2D2426B1EC005343C4 /* DataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataService.swift; sourceTree = "<group>"; };
 		03181A31242953DA005343C4 /* PurchaseVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PurchaseVC.swift; sourceTree = "<group>"; };
 		0322032524242C3D0080145E /* UIProgressViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIProgressViewExtension.swift; sourceTree = "<group>"; };
+		561843DD242C2CF700D1CC97 /* GameVC+UI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "GameVC+UI.swift"; sourceTree = "<group>"; };
 		561A166B242965C400ECB5ED /* RadialGradient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RadialGradient.swift; sourceTree = "<group>"; };
 		5646CEAA24267292001A6CC9 /* CustomizeTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomizeTVC.swift; sourceTree = "<group>"; };
 		5679DC0B24228D8A00965598 /* UIImageViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageViewExtension.swift; sourceTree = "<group>"; };
 		5696D93824267CAA007AC9C1 /* TitleCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleCell.swift; sourceTree = "<group>"; };
 		5696D93A24267CBE007AC9C1 /* TVCCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TVCCell.swift; sourceTree = "<group>"; };
 		56970CCB24267E210023246D /* ItemCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemCell.swift; sourceTree = "<group>"; };
+		569B0547242BF98000096E43 /* Database.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Database.swift; sourceTree = "<group>"; };
+		569B0549242BFFA300096E43 /* RealmService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmService.swift; sourceTree = "<group>"; };
 		56C6081F2426806500F106E0 /* Item.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
 		56CD255F2421931800D00880 /* Corona Clicker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Corona Clicker.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		56CD25622421931800D00880 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -87,7 +93,6 @@
 				8D981B07557175238D1559A4 /* Pods-Corona Clicker.debug.xcconfig */,
 				D096470B39B94718C0A7E643 /* Pods-Corona Clicker.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -108,6 +113,15 @@
 				56970CCB24267E210023246D /* ItemCell.swift */,
 			);
 			path = "Item Collection";
+			sourceTree = "<group>";
+		};
+		569B0546242BF95200096E43 /* Realm */ = {
+			isa = PBXGroup;
+			children = (
+				569B0547242BF98000096E43 /* Database.swift */,
+				569B0549242BFFA300096E43 /* RealmService.swift */,
+			);
+			path = Realm;
 			sourceTree = "<group>";
 		};
 		56CD25562421931800D00880 = {
@@ -132,6 +146,7 @@
 			isa = PBXGroup;
 			children = (
 				56CD257A242193D300D00880 /* Other */,
+				569B0546242BF95200096E43 /* Realm */,
 				56F018A82422823000A816B0 /* Extensions */,
 				56CD2576242193B100D00880 /* Resources */,
 				56CD2577242193BA00D00880 /* Model */,
@@ -174,6 +189,7 @@
 			isa = PBXGroup;
 			children = (
 				56F018A22422273E00A816B0 /* GameVC.swift */,
+				561843DD242C2CF700D1CC97 /* GameVC+UI.swift */,
 				03181A31242953DA005343C4 /* PurchaseVC.swift */,
 				56DC560C24243BE3003D411A /* MenuVC.swift */,
 				5696D93C24267CC5007AC9C1 /* TVC */,
@@ -331,6 +347,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				56CD25632421931800D00880 /* AppDelegate.swift in Sources */,
+				569B054A242BFFA300096E43 /* RealmService.swift in Sources */,
 				56CD25652421931800D00880 /* SceneDelegate.swift in Sources */,
 				56F018AC2422856E00A816B0 /* UILabelExtension.swift in Sources */,
 				56E469672424EE2100C0D6FD /* AlertView.swift in Sources */,
@@ -342,7 +359,9 @@
 				03181A2E2426B1EC005343C4 /* DataService.swift in Sources */,
 				56C608202426806500F106E0 /* Item.swift in Sources */,
 				56DC560D24243BE3003D411A /* MenuVC.swift in Sources */,
+				569B0548242BF98000096E43 /* Database.swift in Sources */,
 				5679DC0C24228D8A00965598 /* UIImageViewExtension.swift in Sources */,
+				561843DE242C2CF700D1CC97 /* GameVC+UI.swift in Sources */,
 				03181A32242953DB005343C4 /* PurchaseVC.swift in Sources */,
 				561A166C242965C400ECB5ED /* RadialGradient.swift in Sources */,
 				56DC560B24243A9D003D411A /* UIViewExtension.swift in Sources */,

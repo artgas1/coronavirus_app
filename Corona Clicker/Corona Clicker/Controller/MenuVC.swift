@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import RealmSwift
 
 class MenuVC: UIViewController {
     
@@ -16,6 +17,8 @@ class MenuVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        let realm = try! Realm()
+        print(Realm.Configuration.defaultConfiguration.fileURL)
         setupUI()
     }
     

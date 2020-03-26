@@ -9,6 +9,15 @@
 import UIKit
 
 public struct Base {
+    static let launchKey = "launchedBefore"
+    
+    static let created = "created"
+    static let score = "score"
+    static let goal = "goal"
+    static let virusIndex = "virusIndex"
+    static let availableViruses = "availableViruses"
+    static let premium = "premium"
+    
     static public let basicCorona = "Basic\nVirus"
     static public let toxicCorona = "Toxic\nVirus"
     static public let rareCorona = "Rare\nVirus"
@@ -29,8 +38,10 @@ public struct Base {
     static let lockedCoronaImage: UIImage = UIImage(named: "LockedCorona")!
     
     static let levels:[Int] = [100, 1000, 1000]
+    static let initialVirus = "0"
 }
 
 extension Notification.Name {
     static let updateVirus = Notification.Name("Update Virus")
+    static let realmError = Notification.Name("Realm Error")
 }

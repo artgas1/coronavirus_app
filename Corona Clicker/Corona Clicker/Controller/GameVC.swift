@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import RealmSwift
 
 class GameVC: UIViewController {
 
@@ -20,6 +21,10 @@ class GameVC: UIViewController {
     @IBOutlet weak var multiplyer: UILabel!
     @IBOutlet weak var progressBar: UIProgressView!
     @IBOutlet weak var progressLabel: UILabel!
+    @IBOutlet weak var menuBtn: UIButton!
+    
+    let realm = RealmService.instance.realm
+    let radialGradient = RadialGradientView()
     
     // MARK: - Stats
     var gameStarted = false
@@ -28,70 +33,6 @@ class GameVC: UIViewController {
     var coeffitient = 1
     var nullCounter = 0
     var purshasedCoeffitient = 1
-    
-    var currentVirus: Int {
-        set {
-            UserDefaults.standard.set(newValue, forKey: "currentVirusDataKey")
-            UserDefaults.standard.synchronize()
-        }
-        get{
-            if let currentVirusData = UserDefaults.standard.integer(forKey: "currentVirusDataKey") as? Int {
-                return currentVirusData
-            }
-            else {
-                return 0
-            }
-        }
-    }
-    var totalGameStarted: Bool {
-        set {
-            UserDefaults.standard.set(newValue, forKey: "gameStartedDataKey")
-            UserDefaults.standard.synchronize()
-        }
-        get {
-            if let gameStartedData = UserDefaults.standard.bool(forKey: "gameStartedDataKey") as? Bool {
-                return gameStartedData
-            }
-            else {
-                return false
-            }
-        }
-    }
-    var counter: Int {
-        set {
-            UserDefaults.standard.set(newValue, forKey: "counterDataKey")
-            UserDefaults.standard.synchronize()
-        }
-        get{
-            if let counterData = UserDefaults.standard.integer(forKey: "counterDataKey") as? Int{
-                return counterData
-            }
-            else {
-                return 0
-            }
-        }
-    }
-    var goal: Int {
-        set {
-            UserDefaults.standard.set(newValue, forKey: "goalDataKey")
-            UserDefaults.standard.synchronize()
-        }
-        get{
-            if let goalData = UserDefaults.standard.integer(forKey: "goalDataKey") as? Int{
-                if goalData > 10{
-                    return goalData
-                }
-                else {
-                    return 10
-                }
-            }
-            else {
-                return 10
-            }
-        }
-    }
-    
-    let worldPopulation = 7783970600
     
     // MARK: - Virus Animation Settings
     let duration: CGFloat = 0.5
@@ -105,48 +46,68 @@ class GameVC: UIViewController {
     let textOffsetX: Int = 0
     let textOffsetY: Int = 128
     
+    // MARK: - DataService
     var virus = DataService.viruses[DataService.currentItemID]
+    var user: User!
+    var results: Results<User>!
     
-    let radialGradient = RadialGradientView()
-    
-    @IBOutlet weak var menuBtn: UIButton!
+    // MARK: - Score
+    var counter: Int = 0
+    var goal: Int = 100
     
     override func viewDidLoad() {
+        loadProgress()
         setupUI()
         observeTaps()
         updateVirusSettings()
         updateRadialGradient()
-        NotificationCenter.default.addObserver(self, selector: #selector(self.updateVirusSettings), name: .updateVirus, object: nil)
+        observeRealmErrors()
+        observeNotifications()
         super.viewDidLoad()
     }
     
-    func updateRadialGradient() {
-        let frame = self.view.frame
-        radialGradient.frame = frame
-        radialGradient.center = self.view.center
-        radialGradient.colors = [.red, .clear]
-        radialGradient.radius = 256.0
-        self.view.addSubview(radialGradient)
-        self.view.sendSubviewToBack(radialGradient)
+    // MARK: - Realm Data Processing
+    func updateUser(counter: Int, goal: Int) {
+        let update: [String: Any?] = [Base.score: counter,
+                                      Base.goal: goal]
+        RealmService.instance.update(user, with: update)
+        loadProgress()
+    }
+    
+    func loadProgress() {
+        user = realm.objects(User.self).first
+        DataService.user = user
+        counter = user.score
+        goal = user.goal
+        DataService.currentItemID = user.virusIndex
+        
+        let unlocked = user.vIndexes
+        for id in unlocked {
+            if id < DataService.unlockedViruses.count {
+                DataService.unlockedViruses[id] = true
+            } else {
+                print("[GameVC:91:LoadProgress()] - Unlocked viruses overload!")
+            }
+        }
+    }
+    
+    func observeRealmErrors() {
+        RealmService.instance.observeRealmErrors(in: self) { (error) in
+            print(error)
+        }
+    }
+    
+    func observeNotifications() {
+        NotificationCenter.default.addObserver(self,
+                                               selector: #selector(self.updateVirusSettings),
+                                               name: .updateVirus,
+                                               object: nil)
     }
     
     @objc func updateVirusSettings() {
         virus = DataService.viruses[DataService.currentItemID]
         virusImage.image = virus.image
         purshasedCoeffitient = virus.contaigousness
-    }
-    
-    func setupUI() {
-        multiplyer.text = "X1"
-        tapCounter.text = "\(counter) INFECTED"
-        tapSpeed.text = "0.0 people per second"
-        menuBtn.titleLabel?.font = UIFont(name: "Bungee-Regular", size: 24)
-        progressLabel.text = "0/\(goal)"
-        if totalGameStarted {callToAction.text = "Tap to continue"}
-    }
-    
-    override var prefersStatusBarHidden: Bool {
-        return true
     }
     
     // MARK: - Virus Taps
@@ -159,10 +120,10 @@ class GameVC: UIViewController {
     @objc func onVirusTap() {
         if !gameStarted {
             gameStarted = true
-            totalGameStarted = true
             startTimer()
             changeAppearence()
         }
+        
         counter += 1 * coeffitient
         nullCounter += 1 * coeffitient
         tapCounter.text = "\(counter) INFECTED"
@@ -171,57 +132,13 @@ class GameVC: UIViewController {
         counterTextOutputs(counter: 1*coeffitient)
         
         if counter >= goal {
-            self.showUpperAlert(title: "Fascinating!", text: "The virus is spreading rapidly! You have infected \(goal) people.", countdown: 3)
+            self.showUpperAlert(title: "Fascinating!",
+                                text: "The virus is spreading rapidly! You have infected \(goal) people.",
+                                countdown: 3)
             goal *= 10
         }
-        if goal >= worldPopulation {goal = worldPopulation}
-        
+        updateUser(counter: counter, goal: goal)
         virusImage.scaleOutIn(duration: duration, delay: delay, scaleX: scaleX, scaleY: scaleY)
-    }
-    
-    func counterTextOutputs(counter: Int) {
-        let label = UILabel(frame: CGRect(x: 0, y: 0, width: 64, height: 32))
-        label.center = CGPoint(x: labelX, y: labelY)
-        label.font = UIFont(name: "Bungee-Regular", size: 30)
-        label.textAlignment = .center
-        label.textColor = .white
-        label.text = "+\(counter)"
-        self.view.addSubview(label)
-        label.floatAway(offsetX: textOffsetX, offsetY: textOffsetY, duration: textDuration, delay: textDelay) {
-            label.removeFromSuperview()
-        }
-    }
-    
-    var labelX: Int {
-        return Int(virusImage.frame.origin.x) + 36 + Int(arc4random()) % (Int(virusImage.frame.height) - 64)
-    }
-    
-    var labelY: Int {
-        return Int(virusImage.frame.origin.y) + 36 + Int(arc4random()) % (Int(virusImage.frame.width) - 64)
-    }
-    
-    // MARK: - On First Tap
-    func changeAppearence() {
-        let duration: CGFloat = 0.2
-        let delay: CGFloat = 0.2
-        
-        gameTitle.fadeOut(duration: duration, delay: delay) {
-            self.gameTitle.removeFromSuperview()
-        }
-        gameSubtitle.fadeOut(duration: duration, delay: delay) {
-            self.gameSubtitle.removeFromSuperview()
-        }
-        callToAction.fadeOut(duration: duration, delay: delay) {
-            self.callToAction.removeFromSuperview()
-        }
-        
-        tapCounter.fadeIn(duration: duration, delay: delay)
-        tapSpeed.fadeIn(duration: duration, delay: delay)
-        multiplyerTitle.fadeIn(duration: duration, delay: delay)
-        multiplyer.fadeIn(duration: duration, delay: delay)
-        menuBtn.fadeIn(duration: duration, delay: delay)
-        progressBar.fadeIn(duration: duration, delay: delay)
-        progressLabel.fadeIn(duration: duration, delay: delay)
     }
     
     // MARK: - Speed Timer

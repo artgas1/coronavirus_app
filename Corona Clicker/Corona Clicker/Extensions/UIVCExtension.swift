@@ -11,7 +11,6 @@ import UIKit
 extension UIViewController {
     
     func showUpperAlert(title: String, text: String, countdown: Double) {
-        print("show upper alert")
         let width:CGFloat = screenWidth - 2 * xConstraint
         let height: CGFloat = 128
         let frame = CGRect(x: xConstraint, y: 0, width: width, height: height)
