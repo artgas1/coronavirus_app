@@ -36,6 +36,16 @@ class RealmService {
         }
     }
     
+    func add(item object: RealmItem) {
+        do {
+            try realm.write {
+                realm.objects(User.self).first!.availableViruses.append(object)
+            }
+        } catch {
+            post(error)
+        }
+    }
+    
     func post(_ error: Error) {
         NotificationCenter.default.post(name: .realmError, object: error)
     }

@@ -21,7 +21,7 @@ class DataService{
     ]
     
     static let items: [Item] = [
-        Item.init(image: Base.coronaItemsImages[0], title: Base.basicCorona, goal: Base.levels[0]),
+        Item.init(image: Base.coronaItemsImages[0], title: Base.basicCorona, goal: Base.levels[0], isLocked: false),
         Item.init(image: Base.coronaItemsImages[1], title: Base.toxicCorona, goal: Base.levels[1]),
         Item.init(image: Base.coronaItemsImages[2], title: Base.rareCorona, goal: Base.levels[2])
     ]

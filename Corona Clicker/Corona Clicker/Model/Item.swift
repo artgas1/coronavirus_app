@@ -20,9 +20,10 @@ class Item {
     public var isLocked: Bool = false
     public var purchaseID: String?
     
-    required init(image: UIImage, title: String, goal: Int) {
+    required init(image: UIImage, title: String, goal: Int, isLocked: Bool = true) {
         self.image = image
         self.title = title
         self.goal = goal
+        self.isLocked = isLocked
     }
 }

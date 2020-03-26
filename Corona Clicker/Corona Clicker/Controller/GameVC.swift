@@ -57,6 +57,7 @@ class GameVC: UIViewController {
     
     override func viewDidLoad() {
         loadProgress()
+        addDefaultVirus()
         setupUI()
         observeTaps()
         updateVirusSettings()
@@ -80,15 +81,6 @@ class GameVC: UIViewController {
         counter = user.score
         goal = user.goal
         DataService.currentItemID = user.virusIndex
-        
-        let unlocked = user.vIndexes
-        for id in unlocked {
-            if id < DataService.unlockedViruses.count {
-                DataService.unlockedViruses[id] = true
-            } else {
-                print("[GameVC:91:LoadProgress()] - Unlocked viruses overload!")
-            }
-        }
     }
     
     func observeRealmErrors() {
@@ -115,6 +107,13 @@ class GameVC: UIViewController {
         let gesture = UITapGestureRecognizer(target: self, action: #selector(self.onVirusTap))
         virusImage.isUserInteractionEnabled = true
         virusImage.addGestureRecognizer(gesture)
+    }
+    
+    func addDefaultVirus() {
+        if user.availableViruses.isEmpty {
+            let defaultItem = RealmItem(id: 0, contaigousness: 1)
+            RealmService.instance.add(item: defaultItem)
+        }
     }
     
     @objc func onVirusTap() {

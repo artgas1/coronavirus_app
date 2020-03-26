@@ -7,20 +7,38 @@
 //
 
 import UIKit
+import RealmSwift
 
 class CustomizeTVC: UITableViewController {
     
     let titleBar = "TitleBar"
     let TVCCell = "TVCCell"
     
+    let realm = RealmService.instance.realm
+    
+    var unlockedItems: List<RealmItem>!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        updateVirusStatuses()
         self.tableView.isScrollEnabled = false
         self.tableView.delegate = self
         self.tableView.dataSource = self
     }
 
+    func updateVirusStatuses() {
+        unlockedItems = DataService.user.availableViruses
+        print(DataService.user!)
+        
+        for item in unlockedItems {
+            DataService.items[item.id].isLocked = false
+            DataService.items[item.id].contaigousness = item.contaigousness
+            DataService.items[item.id].damage = item.damage
+            DataService.items[item.id].mutation = item.mutation
+        }
+    }
+    
     override var prefersStatusBarHidden: Bool {
         return true
     }
