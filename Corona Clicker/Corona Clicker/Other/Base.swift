@@ -26,18 +26,26 @@ public struct Base {
     static let coronaImages: [UIImage] = [
         UIImage(named: "corona")!,
         UIImage(named: "ToxicCorona1")!,
-        UIImage(named: "RareCorona1")!
+        UIImage(named: "RareCorona1")!,
     ]
     
     static let coronaItemsImages: [UIImage] = [
         UIImage(named: "BasicCorona")!,
         UIImage(named: "ToxicCorona")!,
-        UIImage(named: "RareCorona")!
+        UIImage(named: "RareCorona")!,
     ]
     
-    static let lockedCoronaImage: UIImage = UIImage(named: "LockedCorona")!
+    static let coronaProductsID: [String] = [
+        "georgefed.CoronaClicker.ToxicVirus",
+        "georgefed.CoronaClicker.RareVirus",
+    ]
     
-    static let levels:[Int] = [100, 1000, 1000]
+    static let lockedCoronaImage: UIImage = UIImage(named: "LockedVirus")!
+    
+    static let levels:[Int] = [100,
+                               1000,
+                               1000,
+    ]
     static let initialVirus = "0"
 }
 

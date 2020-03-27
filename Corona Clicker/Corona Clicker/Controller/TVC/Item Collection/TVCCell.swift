@@ -87,6 +87,12 @@ extension TVCCell: UICollectionViewDelegate, UICollectionViewDataSource, UIColle
                 DataService.currentItemID = indexPath.item
                 NotificationCenter.default.post(name: .updateVirus, object: nil)
             }
+        } else {
+        if let topVC = UIApplication.getTopViewController() {
+            let purchaseVC = topVC.storyboard?.instantiateViewController(withIdentifier: "PurchaseID") as! PurchaseVC
+            purchaseVC.item = items[indexPath.item]
+            topVC.present(purchaseVC, animated: true, completion: nil)
+            }
         }
     }
     

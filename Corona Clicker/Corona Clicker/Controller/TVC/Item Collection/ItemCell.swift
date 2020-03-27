@@ -20,8 +20,13 @@ class ItemCell: UICollectionViewCell {
     
     public func configure(item: Item) {
         self.item = item
-        self.itemImage.image = item.image
-        self.itemTitle.text = item.title
+        if item.isLocked == true {
+            self.itemImage.image = Base.lockedCoronaImage
+            self.itemTitle.text = Base.lockedCorona
+        } else {
+            self.itemImage.image = item.image
+            self.itemTitle.text = item.title
+        }
     }
     
     public func animateSelection() {
