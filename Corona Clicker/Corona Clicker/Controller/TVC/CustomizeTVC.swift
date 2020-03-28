@@ -20,13 +20,32 @@ class CustomizeTVC: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        addPurchaseObserver()
+        observeRealmErrors()
         updateVirusStatuses()
         self.tableView.isScrollEnabled = false
         self.tableView.delegate = self
         self.tableView.dataSource = self
     }
-
+    
+    func addPurchaseObserver() {
+        NotificationCenter.default.addObserver(self,
+                                               selector: #selector(self.loadItems),
+                                               name: .itemPurchased,
+                                               object: nil)
+    }
+    
+    func observeRealmErrors() {
+        RealmService.instance.observeRealmErrors(in: self) { (error) in
+            print(error ?? "")
+        }
+    }
+    
+    @objc func loadItems() {
+        DataService.user = realm.objects(User.self).first
+        updateVirusStatuses()
+    }
+    
     func updateVirusStatuses() {
         unlockedItems = DataService.user.availableViruses
         print(DataService.user!)
@@ -37,6 +56,7 @@ class CustomizeTVC: UITableViewController {
             DataService.items[item.id].damage = item.damage
             DataService.items[item.id].mutation = item.mutation
         }
+        self.tableView.reloadData()
     }
     
     override var prefersStatusBarHidden: Bool {

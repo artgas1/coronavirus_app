@@ -52,4 +52,5 @@ public struct Base {
 extension Notification.Name {
     static let updateVirus = Notification.Name("Update Virus")
     static let realmError = Notification.Name("Realm Error")
+    static let itemPurchased = Notification.Name("Item Purchased")
 }
