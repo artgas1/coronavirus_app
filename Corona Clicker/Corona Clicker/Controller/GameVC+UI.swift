@@ -13,9 +13,11 @@ extension GameVC {
     func setupUI() {
         multiplyer.text = "X1"
         tapCounter.text = "\(counter) INFECTED"
+        tapCounter.textColor = Base.virusColors[DataService.currentItemID]
         tapSpeed.text = "0.0 people per second"
         menuBtn.titleLabel?.font = UIFont(name: "Bungee-Regular", size: 24)
         progressLabel.text = "0/\(goal)"
+        progressBar.progressTintColor = Base.virusColors[DataService.currentItemID]
         if !DataService.isFirstLaunch { callToAction.text = "Tap to continue" }
     }
     
@@ -42,11 +44,17 @@ extension GameVC {
         progressLabel.fadeIn(duration: duration, delay: delay)
     }
     
+    func updateColorScheme() {
+        tapCounter.textColor = Base.virusColors[DataService.currentItemID]
+        progressBar.progressTintColor = Base.virusColors[DataService.currentItemID]
+        radialGradient.colors = [Base.virusColors[DataService.currentItemID], .clear]
+    }
+    
     func updateRadialGradient() {
         let frame = self.view.frame
         radialGradient.frame = frame
         radialGradient.center = self.view.center
-        radialGradient.colors = [.red, .clear]
+        radialGradient.colors = [Base.virusColors[DataService.currentItemID], .clear]
         radialGradient.radius = 256.0
         self.view.addSubview(radialGradient)
         self.view.sendSubviewToBack(radialGradient)

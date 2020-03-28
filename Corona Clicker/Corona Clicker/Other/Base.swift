@@ -46,7 +46,8 @@ public struct Base {
                                1000,
                                1000,
     ]
-    static let initialVirus = "0"
+    
+    static let virusColors: [UIColor] = [#colorLiteral(red: 0.6117647059, green: 0.1215686275, blue: 0.1450980392, alpha: 1), #colorLiteral(red: 0.1215686275, green: 0.6117647059, blue: 0.168627451, alpha: 1), #colorLiteral(red: 0.5450980392, green: 0.1215686275, blue: 0.6117647059, alpha: 1)]
 }
 
 extension Notification.Name {

@@ -98,6 +98,7 @@ class GameVC: UIViewController {
     
     @objc func updateVirusSettings() {
         virus = DataService.viruses[DataService.currentItemID]
+        updateColorScheme()
         virusImage.image = virus.image
         purshasedCoeffitient = virus.contaigousness
     }
