@@ -117,6 +117,15 @@ class GameVC: UIViewController {
         }
     }
     
+    func unlockVirus(goal: Int) -> (Bool, Item?) {
+        guard let unlockedItem = DataService.items.first(where: { $0.goal == goal }) else { return (false, nil) }
+        guard let id = DataService.items.firstIndex(where: { $0 === unlockedItem }) else { return (false, nil) }
+        let realmItem = RealmItem(id: id, contaigousness: unlockedItem.contaigousness, damage: unlockedItem.damage, mutation: unlockedItem.mutation)
+        RealmService.instance.add(item: realmItem)
+        NotificationCenter.default.post(name: .itemPurchased, object: nil)
+        return (true, unlockedItem)
+    }
+    
     @objc func onVirusTap() {
         if !gameStarted {
             gameStarted = true
@@ -132,8 +141,18 @@ class GameVC: UIViewController {
         counterTextOutputs(counter: 1*coeffitient)
         
         if counter >= goal {
-            self.showUpperAlert(title: "Fascinating!",
-                                text: "The virus is spreading rapidly! You have infected \(goal) people.",
+            var title: String!, text: String!
+            let unlockResult = unlockVirus(goal: goal).self
+            if unlockResult.0 {
+                let name = unlockResult.1!.title.replacingOccurrences(of: "\n", with: " ")
+                title = "Amazing!"
+                text = "New virus unlocked: \(name). Visit Customize to try it out"
+            } else {
+                title = "Fascinating!"
+                text = "The virus is spreading rapidly! You have infected \(goal) people."
+            }
+            self.showUpperAlert(title: title,
+                                text: text,
                                 countdown: 3)
             goal *= 10
         }

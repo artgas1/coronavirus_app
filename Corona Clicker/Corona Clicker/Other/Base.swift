@@ -42,10 +42,9 @@ public struct Base {
     
     static let lockedCoronaImage: UIImage = UIImage(named: "LockedVirus")!
     
-    static let levels:[Int] = [100,
+    static let levels:[Int] = [0,
                                1000,
-                               1000,
-    ]
+                               10000,]
     
     static let virusColors: [UIColor] = [#colorLiteral(red: 0.6117647059, green: 0.1215686275, blue: 0.1450980392, alpha: 1), #colorLiteral(red: 0.1215686275, green: 0.6117647059, blue: 0.168627451, alpha: 1), #colorLiteral(red: 0.5450980392, green: 0.1215686275, blue: 0.6117647059, alpha: 1)]
 }
