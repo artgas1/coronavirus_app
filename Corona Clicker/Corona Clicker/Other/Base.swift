@@ -24,9 +24,9 @@ public struct Base {
     static public let lockedCorona = "Locked\nVirus"
 
     static let coronaImages: [UIImage] = [
-        UIImage(named: "corona")!,
-        UIImage(named: "ToxicCorona1")!,
-        UIImage(named: "RareCorona1")!,
+        UIImage(named: "BasicCoronaImage")!,
+        UIImage(named: "ToxicCoronaImage")!,
+        UIImage(named: "RareCoronaImage")!,
     ]
     
     static let coronaItemsImages: [UIImage] = [

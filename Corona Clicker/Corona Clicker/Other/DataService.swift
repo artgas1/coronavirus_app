@@ -14,6 +14,7 @@ class DataService{
     static var currentItemID: Int = 0
     static var unlockedViruses = [ true, false, false ]
     static var isFirstLaunch: Bool = false
+    
     static let viruses: [Item] = [
         Item.init(image: Base.coronaImages[0], title: Base.basicCorona, goal: Base.levels[0]),
         Item.init(image: Base.coronaImages[1], title: Base.toxicCorona, goal: Base.levels[1]),

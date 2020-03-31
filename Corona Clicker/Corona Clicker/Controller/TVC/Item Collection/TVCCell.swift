@@ -7,10 +7,12 @@
 //
 
 import UIKit
+import RealmSwift
 
 class TVCCell: UITableViewCell {
 
     @IBOutlet weak var collectionView: UICollectionView!
+    
     var items: [Item]!
     let itemId = "Item"
     
@@ -18,6 +20,8 @@ class TVCCell: UITableViewCell {
     let minimumLineSpacing: CGFloat = 0
     let minimumInteritemSpacing: CGFloat = 0
     let cellsPerRow = 2
+    
+    let realm = RealmService.instance.realm
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -43,6 +47,11 @@ class TVCCell: UITableViewCell {
         }
     }
 
+    func updateRealm(id: Int) {
+        DataService.user = realm.objects(User.self).first
+        let update: [String: Any?] = [Base.virusIndex: id]
+        RealmService.instance.update(DataService.user, with: update)
+    }
 }
 
 extension TVCCell: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
@@ -85,13 +94,14 @@ extension TVCCell: UICollectionViewDelegate, UICollectionViewDataSource, UIColle
             if let cell = collectionView.cellForItem(at: indexPath) as? ItemCell {
                 cell.animateSelection()
                 DataService.currentItemID = indexPath.item
+                updateRealm(id: indexPath.item)
                 NotificationCenter.default.post(name: .updateVirus, object: nil)
             }
         } else {
-        if let topVC = UIApplication.getTopViewController() {
-            let purchaseVC = topVC.storyboard?.instantiateViewController(withIdentifier: "PurchaseID") as! PurchaseVC
-            purchaseVC.item = items[indexPath.item]
-            topVC.present(purchaseVC, animated: true, completion: nil)
+            if let topVC = UIApplication.getTopViewController() {
+                let purchaseVC = topVC.storyboard?.instantiateViewController(withIdentifier: "PurchaseID") as! PurchaseVC
+                purchaseVC.item = items[indexPath.item]
+                topVC.present(purchaseVC, animated: true, completion: nil)
             }
         }
     }
